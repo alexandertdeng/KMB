@@ -1,0 +1,41 @@
+# Main menu. Each item is either a link (url) or a dropdown (children).
+# A child with "label" only (no url) is shown as a small group heading.
+- title: Home
+  url: /
+- title: Medical Endorsement
+  url: /medical-endorsement-of-keep-me-breathing/
+- title: About KMB
+  url: /keep-me-breathing-team-and-advisory-board/
+- title: CCHS
+  children:
+    - { title: "What is CCHS? For patients & parents", url: /cchs-for-patients-and-parents/ }
+    - { title: CCHS for professionals, url: /cchs-for-professionals/ }
+    - { title: What causes CCHS?, url: /what-is-the-cause-of-congenital-central-hypoventilation-syndrome/ }
+    - { title: "A newborn diagnosis: what to do next", url: /cchs-newborn-and-diagnosis-what-to-do-next-specialists-and-new-treatments/ }
+    - { title: How many patients have CCHS?, url: /how-many-patients-with-cchs/ }
+    - { title: Mask vs tracheostomy vs pacer, url: /cchs-mask-vs-tracheostomy-vs-pacer/ }
+    - { title: CCHS treatment and options, url: /cchs-treatment-and-options/ }
+    - { title: Quality of life research, url: /cchsqualityoflife/ }
+    - { title: Research partners, url: /partners/ }
+    - { label: Stories }
+    - { title: Casper’s story, url: /caspersstory/ }
+    - { title: Beau’s story, url: /beaus-story/ }
+    - { title: More CCHS stories, url: /more-cchs-stories/ }
+- title: Updates
+  children:
+    - { title: KMB updates, url: /updates/ }
+    - { title: Technology update, url: /technology-update/ }
+    - { title: News bulletins, url: /read-our-bi-monthly-news-bulletins-below/ }
+    - { title: Press & media, url: /keep-me-breathing-press/ }
+    - { title: Subscribe, url: /subscribe-for-our-news-and-updates/ }
+- title: Events
+  children:
+    - { title: Upcoming events, url: /events/ }
+    - { title: Past events, url: /gallery/ }
+    - { title: Conferences & talks, url: /conferences/ }
+    - { title: Fundraising, url: /sm-version-fundraising/ }
+    - { title: Volunteers needed, url: /volunteer-network/ }
+- title: Shop
+  url: /shop/
+- title: Contact
+  url: /contact-page/

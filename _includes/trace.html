@@ -1,0 +1,15 @@
+<!-- Capnography (CO2) trace - the waveform our VENTO monitor reads -->
+<div aria-hidden="true" class="kmb-trace">
+  <svg preserveAspectRatio="none" viewBox="0 0 2880 90" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <path d="M0,72 h64 l14,-46 96,-6 14,52 h52 l14,-46 96,-6 14,52 h52 l14,-46 96,-6 14,52 h52 l14,-46 96,-6 14,52 h64" fill="none" id="kmb-wave-{{ include.id | default: 'p' }}" stroke="#41b6e6" stroke-width="1.5"></path>
+    </defs>
+    <g class="kmb-trace-g">
+      <use href="#kmb-wave-{{ include.id | default: 'p' }}" x="0"></use>
+      <use href="#kmb-wave-{{ include.id | default: 'p' }}" x="720"></use>
+      <use href="#kmb-wave-{{ include.id | default: 'p' }}" x="1440"></use>
+      <use href="#kmb-wave-{{ include.id | default: 'p' }}" x="2160"></use>
+    </g>
+    <line class="kmb-trace-flat" stroke="#41b6e6" stroke-width="1.5" x1="0" x2="2880" y1="72" y2="72"></line>
+  </svg>
+</div>

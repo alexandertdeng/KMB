@@ -1,0 +1,13 @@
+{%- assign e = include.event -%}
+<article class="kmb-tile{% if e.link %} is-link{% endif %}"{% if e.date %} data-date="{{ e.date }}"{% endif %}>
+  <div class="kmb-tile-img kmb-tile-img--square{% unless e.image %} kmb-tile-img--placeholder{% endunless %}">
+    {% if e.image %}<img src="{{ e.image | relative_url }}" alt="{{ e.title | escape }} poster" loading="lazy">{% else %}<img src="{{ '/assets/uploads/2022/09/KMB-Blue-icon-RGB-300x300.png' | relative_url }}" alt="" loading="lazy">{% endif %}
+  </div>
+  <div class="kmb-tile-body">
+    {% if e.when or e.where %}<p class="kmb-tile-meta">{{ e.when }}{% if e.when and e.where %} · {% endif %}{{ e.where }}</p>
+    {% elsif include.show_posted %}<p class="kmb-tile-meta">{{ e.posted | date: "%B %Y" }}</p>{% endif %}
+    <h3>{{ e.title }}</h3>
+    {% if e.blurb %}<p>{{ e.blurb }}</p>{% endif %}
+    {% if e.link %}<a class="kmb-arrow-link" href="{% if e.link contains '://' %}{{ e.link }}{% else %}{{ e.link | relative_url }}{% endif %}"{% if e.link contains '://' %} rel="noopener"{% endif %}>{{ e.link_text | default: "Find out more" }}</a>{% endif %}
+  </div>
+</article>

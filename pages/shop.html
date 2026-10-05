@@ -1,0 +1,26 @@
+---
+layout: default
+title: Shop
+permalink: /shop/
+eyebrow: Shop
+lede: Books, clothing and handmade gifts. Every purchase supports research into treatments for CCHS.
+description: Keep Me Breathing shop - books, clothing and gifts that support CCHS research.
+---
+{% include page-hero.html %}
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    <div class="kmb-tiles">
+      {%- assign products = site.products | sort: "order" -%}
+      {%- for p in products %}
+      <a class="kmb-tile" href="{{ p.url | relative_url }}">
+        <div class="kmb-tile-img kmb-tile-img--square"><img src="{{ p.images[0] | relative_url }}" alt="{{ p.title | escape }}" loading="lazy"></div>
+        <div class="kmb-tile-body">
+          <h3>{{ p.title }}</h3>
+          <p class="kmb-tile-price">£{{ p.price }}{% if p.price_max %} – £{{ p.price_max }}{% endif %}</p>
+          <span class="kmb-arrow-link">{% if p.options.size > 0 %}Choose options{% else %}View{% endif %}</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

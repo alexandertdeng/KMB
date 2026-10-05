@@ -1,0 +1,12 @@
+{%- assign p = include.post -%}
+<a class="kmb-tile" href="{{ p.url | relative_url }}" data-cats="{{ p.categories | join: '|' | escape }}">
+  <div class="kmb-tile-img{% unless p.image %} kmb-tile-img--placeholder{% endunless %}">
+    {% if p.image %}<img src="{{ p.image | relative_url }}" alt="" loading="lazy">{% else %}<img src="{{ '/assets/uploads/2022/09/KMB-Blue-icon-RGB-300x300.png' | relative_url }}" alt="" loading="lazy">{% endif %}
+  </div>
+  <div class="kmb-tile-body">
+    <p class="kmb-tile-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%-d %b %Y" }}</time>{% if p.categories.size > 0 %} · {{ p.categories | first }}{% endif %}</p>
+    <h3>{{ p.title }}</h3>
+    {% if p.description %}<p>{{ p.description | truncatewords: 24 }}</p>{% endif %}
+    <span class="kmb-arrow-link">Read more</span>
+  </div>
+</a>

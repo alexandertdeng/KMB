@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% include page-hero.html %}
+<section class="kmb-body">
+  <div class="kmb-wrap kmb-prose">
+    {{ content }}
+  </div>
+</section>
+{% if page.newsletter %}{% include newsletter.html %}{% endif %}

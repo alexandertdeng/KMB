@@ -1,0 +1,25 @@
+---
+layout: page
+title: Subscribe for news & updates
+permalink: /subscribe-for-our-news-and-updates/
+eyebrow: Updates
+lede: Research milestones, technology updates and news from the Keep Me Breathing team, straight to your inbox.
+description: Subscribe to Keep Me Breathing's news bulletins and CCHS treatment updates.
+---
+<div class="kmb-split">
+  <div>
+    <h2>Join the list</h2>
+    <p>Our bi-monthly bulletins share progress on the Breathing Pacemaker and VENTO, upcoming events and stories from the CCHS community. We never share your details.</p>
+    <p class="kmb-actions">
+      {% if site.newsletter_url and site.newsletter_url != "" %}
+      <a class="kmb-btn kmb-btn--blue" href="{{ site.newsletter_url }}" rel="noopener">Sign me up</a>
+      {% else %}
+      <a class="kmb-btn kmb-btn--blue" href="mailto:{{ site.email.general }}?subject=Please%20sign%20me%20up%20for%20KMB%20treatment%20updates&amp;body=Hi%20Keep%20Me%20Breathing%20team%2C%0A%0APlease%20add%20me%20to%20the%20treatment%20updates%20list.%0A%0AThank%20you!">Sign me up by email</a>
+      {% endif %}
+    </p>
+  </div>
+  <div class="kmb-cchs-facts">
+    <a class="kmb-help-card" href="{{ '/read-our-bi-monthly-news-bulletins-below/' | relative_url }}"><h3>Read previous bulletins</h3><p>Catch up on everything we’ve shared so far.</p></a>
+    <a class="kmb-help-card" href="{{ '/updates/' | relative_url }}"><h3>Latest updates</h3><p>News, interviews and research announcements.</p></a>
+  </div>
+</div>

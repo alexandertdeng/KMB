@@ -1,0 +1,13 @@
+{%- assign p = include.partner -%}
+<article class="kmb-tile">
+  {% if p.logo and p.logo != "" %}
+  <div class="kmb-tile-img" style="aspect-ratio:auto;height:180px;background:#fff;border-bottom:1px solid var(--kmb-tint);display:grid;place-items:center;padding:24px">
+    <img src="{{ p.logo | relative_url }}" alt="{{ p.name | escape }} logo" loading="lazy" style="object-fit:contain;max-height:130px;width:auto;height:auto;max-width:100%">
+  </div>
+  {% endif %}
+  <div class="kmb-tile-body">
+    <h3>{{ p.name }}</h3>
+    {% if p.blurb and p.blurb != "" %}<p>{{ p.blurb }}</p>{% endif %}
+    {% if p.url and p.url != "" %}<a class="kmb-arrow-link" href="{{ p.url }}" rel="noopener">Visit website</a>{% endif %}
+  </div>
+</article>

@@ -1,0 +1,64 @@
+---
+layout: default
+---
+{%- assign price = page.price | plus: 0 -%}
+<section class="kmb-page-hero">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow"><a href="{{ '/shop/' | relative_url }}">Shop</a> · 100% supports CCHS research</p>
+    <h1>{{ page.title }}</h1>
+  </div>
+  {% include trace.html %}
+</section>
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    <div class="kmb-product">
+      <div class="kmb-product-gallery" data-gallery>
+        <div class="kmb-product-main">
+          <img src="{{ page.images[0] | relative_url }}" alt="{{ page.title | escape }}" data-gallery-main>
+        </div>
+        {% if page.images.size > 1 %}
+        <div class="kmb-product-thumbs">
+          {% for img in page.images %}
+          <button type="button" data-src="{{ img | relative_url }}" {% if forloop.first %}aria-current="true"{% endif %} aria-label="Show image {{ forloop.index }}"><img src="{{ img | relative_url }}" alt=""></button>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="kmb-product-info">
+        <p class="kmb-price">£{{ page.price }}{% if page.price_max %} – £{{ page.price_max }}{% endif %}</p>
+        <form class="kmb-order" data-order
+              data-product="{{ page.title | escape }}"
+              data-email="{{ site.email.shop }}"
+              data-price="{{ page.price }}"
+              {% if page.buy_url != "" and page.buy_url %}data-buy="{{ page.buy_url }}"{% endif %}>
+          {% for opt in page.options %}
+          <div class="kmb-field">
+            <label for="opt-{{ forloop.index }}">{{ opt.name }}</label>
+            <select id="opt-{{ forloop.index }}" name="{{ opt.name | escape }}" required>
+              {% for v in opt.values %}<option>{{ v }}</option>{% endfor %}
+            </select>
+          </div>
+          {% endfor %}
+          <div class="kmb-field" style="margin-top:16px">
+            <label for="qty">Quantity</label>
+            <input id="qty" name="Quantity" type="number" min="1" value="1" style="max-width:120px">
+          </div>
+          <div class="kmb-actions" style="margin-top:24px">
+            {% if page.buy_url and page.buy_url != "" %}
+            <a class="kmb-btn kmb-btn--blue" href="{{ page.buy_url }}" rel="noopener">Buy now</a>
+            {% else %}
+            <button class="kmb-btn kmb-btn--blue" type="submit" style="border:0;cursor:pointer">Order by email</button>
+            {% endif %}
+            {% if page.buy_url_usd %}<a class="kmb-btn" style="border:1.5px solid var(--kmb-tint);color:var(--kmb-blue)" href="{{ page.buy_url_usd }}" rel="noopener">Pay in USD (PayPal)</a>{% endif %}
+          </div>
+        </form>
+        {% unless page.buy_url and page.buy_url != "" %}
+        <p class="kmb-note">Pressing <strong>Order by email</strong> opens a pre-filled email to <a href="mailto:{{ site.email.shop }}">{{ site.email.shop }}</a>. We’ll reply with payment details and delivery costs. Every penny of profit supports CCHS research.</p>
+        {% endunless %}
+        <div class="kmb-product-desc kmb-prose">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
