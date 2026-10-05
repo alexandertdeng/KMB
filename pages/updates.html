@@ -1,0 +1,29 @@
+---
+layout: default
+title: Updates & news
+permalink: /updates/
+eyebrow: Updates
+hero_title: Being <em>relentless</em> in the search for CCHS treatments
+lede: Research milestones, interviews, press and news from the Keep Me Breathing team.
+description: News and updates from Keep Me Breathing on CCHS research, VENTO and the Breathing Pacemaker.
+hero_ctas:
+  - { title: Sign up for news bulletins, url: /subscribe-for-our-news-and-updates/ }
+  - { title: Read past bulletins, url: /read-our-bi-monthly-news-bulletins-below/ }
+---
+{% include page-hero.html %}
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    {%- assign cats = "" | split: "" -%}
+    {%- for post in site.posts %}{% for c in post.categories %}{% unless cats contains c %}{% assign cats = cats | push: c %}{% endunless %}{% endfor %}{% endfor -%}
+    {% if cats.size > 1 %}
+    <div class="kmb-chips" role="group" aria-label="Filter updates">
+      <button class="kmb-chip" type="button" data-cat="" aria-pressed="true">All</button>
+      {% for c in cats %}<button class="kmb-chip" type="button" data-cat="{{ c | escape }}" aria-pressed="false">{{ c }}</button>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="kmb-tiles">
+      {% for post in site.posts %}{% include post-tile.html post=post %}{% endfor %}
+    </div>
+  </div>
+</section>
+{% include newsletter.html %}

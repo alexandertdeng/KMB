@@ -1,0 +1,19 @@
+---
+layout: default
+title: Past events
+permalink: /gallery/
+eyebrow: Events
+lede: Dragon boats, skydives, marathons and open gardens - a look back at the brilliant events our community has run for CCHS research.
+description: A look back at Keep Me Breathing fundraising events.
+hero_ctas:
+  - { title: Upcoming events, url: /events/ }
+---
+{% include page-hero.html %}
+{%- assign past = site.data.events | where: "kind", "past" -%}
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    <div class="kmb-tiles">
+      {%- for e in past %}{% include event-tile.html event=e show_posted=true %}{% endfor %}
+    </div>
+  </div>
+</section>

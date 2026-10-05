@@ -1,0 +1,44 @@
+---
+layout: default
+title: Contact us
+permalink: /contact-page/
+eyebrow: Contact
+lede: Questions about CCHS, our research, fundraising or press - we reply 7 days a week.
+description: Get in touch with Keep Me Breathing - CCHS parents, clinicians, researchers, fundraisers and press are all welcome.
+---
+{% include page-hero.html %}
+<section class="kmb-section kmb-contact" style="border-top:0">
+  <div class="kmb-wrap">
+    <div class="kmb-cols">
+      <div>
+        <p class="kmb-eyebrow">Get in touch</p>
+        <h2>We’d love to hear from you</h2>
+        <p class="kmb-section-lede">We are working relentlessly to make breakthroughs in CCHS research, get treatments faster and find a cure. Whether you’re a CCHS parent, a clinician, a researcher, a fundraiser or press - drop us a line.</p>
+        <p class="kmb-section-lede">We’ll make sure to get back to you as soon as possible, 7 days a week.</p>
+        <div class="kmb-arrow-links">
+          <a class="kmb-arrow-link" href="{{ '/subscribe-for-our-news-and-updates/' | relative_url }}">Sign up for news bulletins</a>
+          <a class="kmb-arrow-link" href="{{ '/volunteer-network/' | relative_url }}">Volunteer with us</a>
+        </div>
+      </div>
+      <div class="kmb-contact-cards">
+        <a class="kmb-contact-card" href="mailto:{{ site.email.general }}"><strong>General enquiries</strong><span>{{ site.email.general }}</span></a>
+        <a class="kmb-contact-card" href="mailto:{{ site.email.sarah }}"><strong>Speak to Sarah</strong><span>{{ site.email.sarah }}</span></a>
+        <a class="kmb-contact-card" href="mailto:{{ site.email.james }}"><strong>James Oakley · Founder</strong><span>{{ site.email.james }}</span></a>
+        <a class="kmb-contact-card" href="mailto:{{ site.email.press }}"><strong>Press &amp; media</strong><span>{{ site.email.press }}</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="kmb-press" style="border-bottom:0">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Follow Keep Me Breathing</p>
+    <div class="kmb-press-row">
+      <a class="kmb-press-name" href="{{ site.social.facebook }}" rel="noopener">Facebook</a>
+      <a class="kmb-press-name" href="{{ site.social.instagram }}" rel="noopener">Instagram</a>
+      <a class="kmb-press-name" href="{{ site.social.twitter }}" rel="noopener">X / Twitter</a>
+      <a class="kmb-press-name" href="{{ site.social.youtube }}" rel="noopener">YouTube</a>
+      <a class="kmb-press-name" href="{{ site.social.linkedin }}" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+{% include newsletter.html %}

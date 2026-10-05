@@ -1,0 +1,33 @@
+<header class="kmb-header">
+  <div class="kmb-header-inner">
+    <a class="kmb-brand" href="{{ '/' | relative_url }}" aria-label="Keep Me Breathing - home">
+      <img src="{{ site.logo | relative_url }}" alt="Keep Me Breathing" width="300" height="134">
+    </a>
+    <button class="kmb-menu-btn" type="button" aria-expanded="false" aria-controls="kmb-nav" aria-label="Menu"><span></span></button>
+    <nav class="kmb-nav" id="kmb-nav" aria-label="Main">
+      <ul>
+        {%- for item in site.data.navigation %}
+        {%- if item.children %}
+          {%- assign current = false %}
+          {%- for child in item.children %}{% if child.url and child.url == page.url %}{% assign current = true %}{% endif %}{% endfor %}
+        <li class="has-sub{% if current %} is-current{% endif %}">
+          <button class="kmb-nav-link" type="button" aria-expanded="false">{{ item.title }} <span class="kmb-caret" aria-hidden="true"></span></button>
+          <ul class="kmb-sub">
+            {%- for child in item.children %}
+            {%- if child.url %}
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} aria-current="page"{% endif %}>{{ child.title }}</a></li>
+            {%- else %}
+            <li><span class="kmb-sub-label">{{ child.label }}</span></li>
+            {%- endif %}
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        <li><a class="kmb-nav-link" href="{{ item.url | relative_url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+    </nav>
+    <a class="kmb-btn kmb-btn--blue kmb-header-donate" href="{{ '/contribute/' | relative_url }}">Donate</a>
+  </div>
+</header>

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Our partners
+permalink: /partners/
+eyebrow: Partners
+lede: The businesses, trusts and organisations standing alongside Keep Me Breathing. Thank you - we couldn’t do this without you.
+description: Keep Me Breathing's corporate partners and supporters.
+hero_ctas:
+  - { title: Become a partner, url: "mailto:info@keepmebreathing.com?subject=Partnering%20with%20Keep%20Me%20Breathing" }
+---
+{% include page-hero.html %}
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    {%- assign headline = site.data.partners | where: "headline", true -%}
+    {%- assign others = site.data.partners | where: "headline", false -%}
+    {% if headline.size > 0 %}
+    <p class="kmb-eyebrow">Headline sponsors</p>
+    <div class="kmb-tiles" style="margin-top:22px;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr))">
+      {% for p in headline %}{% include partner-tile.html partner=p %}{% endfor %}
+    </div>
+    {% endif %}
+    <p class="kmb-eyebrow" style="margin-top:56px">Partners &amp; supporters</p>
+    <div class="kmb-tiles" style="margin-top:22px">
+      {% for p in others %}{% include partner-tile.html partner=p %}{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="kmb-newsletter">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Partner with us</p>
+    <h2>Bring your organisation alongside a high-impact charity</h2>
+    <p>Charity of the year, product partnerships, matched giving or event support - let’s talk about what we could achieve together.</p>
+    <a class="kmb-btn kmb-btn--blue" href="mailto:{{ site.email.general }}?subject=Partnering%20with%20Keep%20Me%20Breathing">Get in touch</a>
+  </div>
+</section>

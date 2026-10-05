@@ -1,0 +1,4 @@
+<div class="kmb-tiles">
+  {% for post in site.posts limit: include.limit %}{% include post-tile.html post=post %}{% endfor %}
+</div>
+<p class="kmb-actions"><a class="kmb-btn kmb-btn--blue" href="{{ '/updates/' | relative_url }}">All updates</a></p>

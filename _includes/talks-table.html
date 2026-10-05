@@ -1,0 +1,19 @@
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign talks = site.data.events | where: "kind", "talk" | sort: "date" -%}
+{%- unless include.upcoming_only %}{% assign talks = talks | reverse %}{% endunless -%}
+<div class="kmb-table-wrap">
+  <table class="kmb-table" {% if include.upcoming_only %}data-talks{% endif %}>
+    <thead><tr><th scope="col">Event</th><th scope="col">Date</th><th scope="col">Location</th>{% unless include.upcoming_only %}<th scope="col"></th>{% endunless %}</tr></thead>
+    <tbody>
+      {%- for e in talks %}
+      {%- if include.upcoming_only and e.date < today %}{% continue %}{% endif %}
+      <tr data-date="{{ e.date }}">
+        <td>{{ e.title }}</td>
+        <td>{{ e.when }}</td>
+        <td>{{ e.where }}</td>
+        {% unless include.upcoming_only %}<td>{% if e.date >= today %}<span class="kmb-project-tag">Upcoming</span>{% endif %}</td>{% endunless %}
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+<section class="kmb-newsletter">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Stay in the loop</p>
+    <h2>Sign up and receive the latest KMB treatment updates</h2>
+    <p>Research milestones, technology updates and news from the Keep Me Breathing team, straight to your inbox. One click and we’ll add you to the list.</p>
+    {% if site.newsletter_url and site.newsletter_url != "" %}
+    <a class="kmb-btn kmb-btn--blue" href="{{ site.newsletter_url }}" rel="noopener">Sign me up</a>
+    {% else %}
+    <a class="kmb-btn kmb-btn--blue" href="mailto:{{ site.email.general }}?subject=Please%20sign%20me%20up%20for%20KMB%20treatment%20updates&amp;body=Hi%20Keep%20Me%20Breathing%20team%2C%0A%0APlease%20add%20me%20to%20the%20treatment%20updates%20list.%0A%0AThank%20you!">Sign me up by email</a>
+    {% endif %}
+  </div>
+</section>

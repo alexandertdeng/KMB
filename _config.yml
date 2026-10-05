@@ -1,0 +1,90 @@
+# ---------------------------------------------------------------
+# Keep Me Breathing - site settings
+# Most day-to-day changes (donate link, emails, socials) live here.
+# ---------------------------------------------------------------
+title: Keep Me Breathing
+tagline: Driving research for CCHS treatment worldwide
+description: >-
+  Keep Me Breathing is a UK registered charity (no. 1201757) driving research
+  for CCHS (Congenital Central Hypoventilation Syndrome) treatment worldwide.
+  100% of donations fund research.
+url: https://keepmebreathing.com
+# If you preview the site at https://<user>.github.io/<repo>/ before the
+# custom domain is live, set baseurl to "/<repo>". Leave "" for keepmebreathing.com.
+baseurl: ""
+lang: en-GB
+logo: /assets/uploads/2022/10/KMB-Blue-Logo-RGB.png
+
+charity:
+  number: "1201757"
+  location: Brighton, UK
+
+# Where the Donate buttons go. GitHub Pages is static, so donations are
+# taken by an external, PCI-compliant provider. Swap these for Stripe
+# Payment Links, PayPal Giving Fund, CAF etc. at any time.
+donate:
+  url: https://www.justgiving.com/charity/keepmebreathing
+  monthly_url: https://www.justgiving.com/charity/keepmebreathing
+  provider: JustGiving
+  amounts: [10, 25, 50, 100]
+
+# Optional: a newsletter signup form endpoint (e.g. a Klaviyo or Mailchimp
+# hosted signup page). Empty = the "Sign me up" button opens a pre-filled email.
+newsletter_url: ""
+
+email:
+  general: info@keepmebreathing.com
+  sarah: sarah@keepmebreathing.com
+  james: james@keepmebreathing.com
+  press: steph@keepmebreathing.com
+  shop: info@keepmebreathing.com
+
+social:
+  facebook: https://www.facebook.com/keepmebreathingfb
+  instagram: https://www.instagram.com/keepmebreathinginsta/
+  twitter: https://twitter.com/keepmebreathtwt
+  youtube: https://www.youtube.com/channel/UCkoubPAcZGiVuyfKIxGU27Q
+  linkedin: https://uk.linkedin.com/company/keep-me-breathing
+
+# SEO (jekyll-seo-tag)
+twitter:
+  username: keepmebreathtwt
+social_links: []
+author: Keep Me Breathing
+
+# ---------------------------------------------------------------
+# Build settings - you shouldn't need to change these
+# ---------------------------------------------------------------
+permalink: /:year/:month/:day/:title/
+timezone: Europe/London
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+
+collections:
+  products:
+    output: true
+    permalink: /product/:name/
+  redirects:
+    output: true
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: products }
+    values: { layout: product }
+  - scope: { path: "", type: redirects }
+    values: { sitemap: false }
+
+exclude:
+  - _migration
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .claude
+  - node_modules

@@ -1,0 +1,64 @@
+---
+layout: default
+title: Donate
+permalink: /contribute/
+description: Donate to Keep Me Breathing. 100% of donations go directly to research and development of treatments and cures for CCHS.
+hide_fab: true
+---
+<section class="kmb-page-hero">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Registered charity no. {{ site.charity.number }}</p>
+    <h1>Help us <em>keep them</em> breathing</h1>
+    <p class="kmb-page-lede">We are a high-impact charity. <strong style="color:var(--kmb-light)">100% of donations</strong> go directly to the research and development of treatments and cures for CCHS.</p>
+  </div>
+  {% include trace.html %}
+</section>
+
+<section class="kmb-body">
+  <div class="kmb-wrap">
+    <div class="kmb-give">
+      <div class="kmb-give-panel">
+        <p class="kmb-eyebrow">Give online</p>
+        <h2>Make a donation</h2>
+        <p>Thank you so much for donating. Every single pound, dollar or euro will help us Keep Them Breathing. This lifelong disease can strike any new family at any time. It takes away the freedom to breathe, sometimes to talk, to exercise, to sleep in your own room alone as a child, teenager and an adult. We will find a treatment and cure with your help.</p>
+        <div class="kmb-amounts" aria-label="Suggested amounts">
+          {% for a in site.donate.amounts %}<a class="kmb-amount" href="{{ site.donate.url }}" rel="noopener">£{{ a }}</a>{% endfor %}
+        </div>
+        <div class="kmb-hero-ctas">
+          <a class="kmb-btn kmb-btn--solid" href="{{ site.donate.url }}" rel="noopener">Donate once</a>
+          <a class="kmb-btn kmb-btn--ghost" href="{{ site.donate.monthly_url }}" rel="noopener">Give monthly</a>
+        </div>
+        <p class="kmb-give-small">Secure payment via {{ site.donate.provider }} · UK taxpayers can add Gift Aid at checkout</p>
+      </div>
+
+      <div class="kmb-prose">
+        <p class="kmb-eyebrow">Where your money goes</p>
+        <h2 style="margin-top:12px">Our single mission</h2>
+        <p>To drive forward, discover and utilise treatments and cures for CCHS sufferers - <strong>to Keep Them Breathing.</strong></p>
+        <ul class="kmb-ticks">
+          <li>The Breathing Pacemaker - a fully implantable biofeedback phrenic-nerve pacing system</li>
+          <li>VENTO - the world’s smallest portable, non-invasive CO₂ wearable</li>
+          <li>Drug development and drug repurposing research</li>
+          <li>Global research collaborations, backed by 130+ doctors and scientists</li>
+        </ul>
+        <div class="kmb-cchs-facts" style="margin-top:28px">
+          <div class="kmb-fact"><strong>Gift Aid</strong>If you’re a UK taxpayer, ticking Gift Aid adds 25p to every £1 you give, at no extra cost to you.</div>
+          <div class="kmb-fact"><strong>Other ways to give</strong>Leaving a legacy, corporate matching or a large gift? Email <a href="mailto:{{ site.email.general }}">{{ site.email.general }}</a> and we’ll be in touch.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kmb-section kmb-help" style="background:var(--kmb-card);border-top:1px solid var(--kmb-tint)">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">More ways to help</p>
+    <h2>Not able to donate right now?</h2>
+    <div class="kmb-help-grid">
+      <a class="kmb-help-card" style="background:#fff" href="{{ '/sm-version-fundraising/' | relative_url }}"><h3>Fundraise</h3><p>Run, ride, bake or climb - set up a JustGiving page and choose Keep Me Breathing.</p></a>
+      <a class="kmb-help-card" style="background:#fff" href="{{ '/volunteer-network/' | relative_url }}"><h3>Volunteer</h3><p>Lend your skills and time to our volunteer network and events across the year.</p></a>
+      <a class="kmb-help-card" style="background:#fff" href="{{ '/shop/' | relative_url }}"><h3>Shop</h3><p>Books, clothing and handmade gifts - every purchase supports CCHS research.</p></a>
+      <a class="kmb-help-card" style="background:#fff" href="{{ '/partners/' | relative_url }}"><h3>Partner with us</h3><p>Bring your organisation alongside a high-impact charity with a clear mission.</p></a>
+    </div>
+  </div>
+</section>

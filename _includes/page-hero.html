@@ -1,0 +1,13 @@
+<section class="kmb-page-hero">
+  <div class="kmb-wrap">
+    {% if page.eyebrow %}<p class="kmb-eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.hero_title | default: page.title }}</h1>
+    {% if page.lede %}<p class="kmb-page-lede">{{ page.lede }}</p>{% endif %}
+    {% if page.hero_ctas %}
+    <div class="kmb-hero-ctas">
+      {% for cta in page.hero_ctas %}<a class="kmb-btn {% if forloop.first %}kmb-btn--solid{% else %}kmb-btn--ghost{% endif %}" href="{% if cta.url contains ':' %}{{ cta.url }}{% else %}{{ cta.url | relative_url }}{% endif %}">{{ cta.title }}</a>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% include trace.html %}
+</section>
