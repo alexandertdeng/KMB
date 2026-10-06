@@ -72,21 +72,31 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Then open http://localhost:4000.
+Then open http://localhost:4000/KMB/ (the `/KMB` prefix matches the GitHub preview).
 
-## Going live on GitHub Pages
+## Preview on GitHub Pages (current setup)
 
-1. Push this repository to GitHub and merge to `main`.
-2. **Settings → Pages**: *Source* = "Deploy from a branch", *Branch* = `main` / `(root)`.
-3. Under **Custom domain** enter `keepmebreathing.com` (the `CNAME` file already
-   says this), then tick **Enforce HTTPS** once the certificate is issued.
+The site is configured to run at **https://alexandertdeng.github.io/KMB/**
+(`url`, `baseurl` and `preview: true` in `_config.yml`). GitHub Pages
+publishes from the `main` branch, so merging this branch into `main` updates
+the preview within a minute or two. While `preview: true`, every page carries a
+`noindex` tag, so the preview never shows up in Google alongside the real site.
+
+## Going live on keepmebreathing.com
+
+1. In `_config.yml` set:
+   ```yaml
+   url: https://keepmebreathing.com
+   baseurl: ""
+   preview: false
+   ```
+2. Add a file called `CNAME` at the repo root containing just `keepmebreathing.com`,
+   and merge to `main`.
+3. **Settings → Pages → Custom domain**: enter `keepmebreathing.com`, then tick
+   **Enforce HTTPS** once the certificate is issued.
 4. At the domain registrar, replace the current WordPress host records with:
    - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` for `www`: `<github-username>.github.io`
+   - `CNAME` for `www`: `alexandertdeng.github.io`
 5. Before switching DNS: re-run the import (see `_migration/README.md`) if
    anything new was published on WordPress, and keep the WordPress hosting
    (and a full backup) until you've confirmed the new site is live.
-
-To preview at `https://<user>.github.io/<repo>/` before the domain moves, set
-`baseurl: "/<repo>"` and `url: https://<user>.github.io` in `_config.yml`
-(set them back to `""` and `https://keepmebreathing.com` for the real domain).

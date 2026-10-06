@@ -8,10 +8,15 @@ description: >-
   Keep Me Breathing is a UK registered charity (no. 1201757) driving research
   for CCHS (Congenital Central Hypoventilation Syndrome) treatment worldwide.
   100% of donations fund research.
-url: https://keepmebreathing.com
-# If you preview the site at https://<user>.github.io/<repo>/ before the
-# custom domain is live, set baseurl to "/<repo>". Leave "" for keepmebreathing.com.
-baseurl: ""
+# ---- Where the site lives ----
+# PREVIEW (now): https://alexandertdeng.github.io/KMB/
+# GO-LIVE: set url to https://keepmebreathing.com, baseurl to "", preview to
+# false, and add back the CNAME file (see README "Going live").
+url: https://alexandertdeng.github.io
+baseurl: /KMB
+# While true, search engines are asked not to index the preview, so it never
+# competes with the real keepmebreathing.com in Google.
+preview: true
 lang: en-GB
 logo: /assets/uploads/2022/10/KMB-Blue-Logo-RGB.png
 
