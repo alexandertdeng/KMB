@@ -1,0 +1,10 @@
+---
+layout: null
+sitemap: false
+---
+User-agent: *
+{% if site.preview %}Disallow: /
+{% else %}Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
+{% endif %}
