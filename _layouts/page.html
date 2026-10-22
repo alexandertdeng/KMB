@@ -7,4 +7,5 @@ layout: default
     {{ content }}
   </div>
 </section>
+{% if page.cta_band %}{% include cta-band.html %}{% endif %}
 {% if page.newsletter %}{% include newsletter.html %}{% endif %}

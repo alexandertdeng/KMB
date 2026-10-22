@@ -1,0 +1,29 @@
+{%- comment -%}
+  The two programmes KMB is building. Used on the homepage, Our research and
+  Major gifts. Pass anchors=true to give each card an id for menu links.
+{%- endcomment -%}
+<div class="kmb-projects">
+<article class="kmb-project"{% if include.anchors %} id="pacemaker"{% endif %}>
+<span class="kmb-project-tag">Treatment</span>
+<h3>The Breathing Pacemaker</h3>
+<p>
+            A fully implantable biofeedback phrenic-nerve pacing system, the
+            world’s first treatment designed specifically for CCHS. Like a
+            cardiac pacemaker for breathing, it will sense what the body needs and
+            adjust the rate and depth of every breath automatically. No wires, no
+            external kit, no mechanical ventilator.
+          </p>
+<p class="kmb-project-note">First patent filed</p>
+</article>
+<article class="kmb-project"{% if include.anchors %} id="vento"{% endif %}>
+<span class="kmb-project-tag">Monitoring</span>
+<h3>VENTO</h3>
+<p>
+            The world’s smallest portable, non-invasive CO₂ wearable,
+            built by Keep Me Breathing. VENTO reads the one signal that matters most
+            to a child with CCHS, carbon dioxide, continuously, comfortably and
+            without needles or hospital hardware.
+          </p>
+<p class="kmb-project-note">Patent pending</p>
+</article>
+</div>

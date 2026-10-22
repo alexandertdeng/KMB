@@ -1,0 +1,103 @@
+---
+layout: default
+title: Our research
+permalink: /our-research/
+eyebrow: Our research
+hero_title: The treatments we’re funding
+lede: We are developing a treatment to change and to save the lives of CCHS patients, in a world where such a treatment does not exist. We will do whatever it takes. Our accelerated five-year plan is backed by over 130 doctors, scientists and medical professionals.
+hero_ctas:
+  - { title: Fund a breakthrough, url: /major-gifts/ }
+  - { title: For clinicians & researchers, url: /cchs-for-professionals/ }
+description: "The Breathing Pacemaker and VENTO: the treatments and technology Keep Me Breathing is developing for CCHS, our roadmap and the people backing it."
+---
+{% include page-hero.html %}
+
+<!-- ============ THE TWO PROGRAMMES ============ -->
+<section class="kmb-section">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">What we’re building</p>
+    <h2>Two programmes, one goal</h2>
+    <p class="kmb-section-lede">Every child with CCHS sleeping safely, without a ventilator.</p>
+    {% include projects.html anchors=true %}
+    <ul class="kmb-scope">
+      <li>Active research projects</li>
+      <li>Global collaborations</li>
+      <li>Drug development research</li>
+      <li>Drug repurposing research</li>
+      <li>A truly implantable biofeedback diaphragm pacer system, removing the need for mechanical ventilation</li>
+      <li>New technology capable of automatically adjusting breathing rate and tidal volume during sleep</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="kmb-section kmb-research">
+  <div class="kmb-wrap">
+    <div class="kmb-cols">
+      <div>
+        <p class="kmb-eyebrow">Our plan</p>
+        <h2>Plan and roadmap</h2>
+        <p class="kmb-section-lede">We are addressing the urgent need for advanced treatments that can both improve and save the lives of people diagnosed with CCHS, by combining advances in innovation and technology with the known science of CCHS and a relentless approach to getting results.</p>
+        <p class="kmb-section-lede">To face down that challenge we have built a world class team within our Medical and Entrepreneurial Advisory Board.</p>
+        <div class="kmb-arrow-links">
+          <a class="kmb-arrow-link" href="{{ '/keep-me-breathing-team-and-advisory-board/' | relative_url }}">Meet our advisory board</a>
+        </div>
+      </div>
+      <figure class="kmb-roadmap">
+        <a data-zoom href="{{ '/assets/uploads/2022/11/Beige-Brown-Abstract-Floral-Comparison-Chart-Graph.jpg' | relative_url }}"><img alt="Our plan and roadmap to treating and beating CCHS" loading="lazy" src="{{ '/assets/uploads/2022/11/Beige-Brown-Abstract-Floral-Comparison-Chart-Graph.jpg' | relative_url }}"/></a>
+        <figcaption>Click to enlarge</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMBRIDGE UNIVERSITY ============ -->
+<section class="kmb-section">
+  <div class="kmb-wrap">
+    <div class="kmb-cols">
+      <div>
+        <p class="kmb-eyebrow">Collaboration</p>
+        <h2>Keep Me Breathing × Cambridge University</h2>
+        <p class="kmb-section-lede">We’re excited to be working with The Cambridge University Consulting Network to research and move forward with an advanced diaphragm pacer.</p>
+        <p class="kmb-section-lede">The consulting network has a strong history of working in the rare disease field, and we’ll keep you fully updated on progress as it is made.</p>
+        <div class="kmb-arrow-links">
+          <a class="kmb-arrow-link" href="{{ '/2022/09/29/cchs-cambridgeconsultingnetwork/' | relative_url }}">Read about the project</a>
+        </div>
+      </div>
+      <iframe allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/bHraBERSIGc?start=8" style="width:100%;aspect-ratio:16/9;border:0" title="Our mission and technology update"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BACKED BY SCIENCE ============ -->
+<section class="kmb-section kmb-research">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Backed by science</p>
+    <h2>The people behind the plan</h2>
+    <div class="kmb-help-grid">
+      <a class="kmb-help-card" href="{{ '/medical-endorsement-of-keep-me-breathing/' | relative_url }}"><h3>Backed by 130+ clinicians</h3><p>The doctors, scientists and rare disease professionals who have signed our letter of support.</p></a>
+      <a class="kmb-help-card" href="{{ '/keep-me-breathing-team-and-advisory-board/' | relative_url }}"><h3>Our advisory board</h3><p>World-leading CCHS clinicians, researchers and entrepreneurs guiding the work.</p></a>
+      <a class="kmb-help-card" href="{{ '/cchs-for-professionals/' | relative_url }}"><h3>For clinicians &amp; researchers</h3><p>Clinical background, research priorities and how to get involved.</p></a>
+      <a class="kmb-help-card" href="{{ '/conferences/' | relative_url }}"><h3>Conferences &amp; talks</h3><p>Where we’ve spoken, and where you can hear from us next.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST FROM THE LAB ============ -->
+{%- assign lab = site.posts | where_exp: "post", "post.title contains 'VENTO'" %}
+<section class="kmb-section">
+  <div class="kmb-wrap">
+    <div class="kmb-section-head">
+      <div>
+        <p class="kmb-eyebrow">Progress</p>
+        <h2>Latest on VENTO</h2>
+      </div>
+      <a class="kmb-arrow-link" href="{{ '/updates/' | relative_url }}">All updates</a>
+    </div>
+    <div class="kmb-tiles">
+      {% for post in lab limit:3 %}{% include post-tile.html post=post full=true %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta-band.html eyebrow="Help us get there faster" %}

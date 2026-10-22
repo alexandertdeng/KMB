@@ -25,7 +25,7 @@ hero_ctas:
       {%- for e in upcoming %}{% unless e.date and e.date < today %}{% include event-tile.html event=e %}{% endunless %}{% endfor %}
     </div>
     <div class="kmb-cchs-facts" style="margin-top:40px;max-width:760px">
-      <div class="kmb-fact"><strong>Hosting your own event?</strong>Bake sales, quiz nights, marathons, skydives - we’ll support you with a fundraising pack. Email <a href="mailto:{{ site.email.general }}" style="color:var(--kmb-blue)">{{ site.email.general }}</a> or read our <a href="{{ '/sm-version-fundraising/' | relative_url }}" style="color:var(--kmb-blue)">fundraising guide</a>.</div>
+      <div class="kmb-fact"><strong>Hosting your own event?</strong>Bake sales, quiz nights, marathons, skydives: we’ll support you with a fundraising pack. Email <a href="mailto:{{ site.email.general }}" style="color:var(--kmb-blue)">{{ site.email.general }}</a> or read our <a href="{{ '/sm-version-fundraising/' | relative_url }}" style="color:var(--kmb-blue)">fundraising guide</a>.</div>
     </div>
   </div>
 </section>

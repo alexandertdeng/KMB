@@ -4,7 +4,7 @@
     {% if e.image %}<img src="{{ e.image | relative_url }}" alt="{{ e.title | escape }} poster" loading="lazy">{% else %}<img src="{{ '/assets/uploads/2022/09/KMB-Blue-icon-RGB-300x300.png' | relative_url }}" alt="" loading="lazy">{% endif %}
   </div>
   <div class="kmb-tile-body">
-    {% if e.when or e.where %}<p class="kmb-tile-meta">{{ e.when }}{% if e.when and e.where %} · {% endif %}{{ e.where }}</p>
+    {% if e.when or e.where %}<p class="kmb-tile-meta">{{ e.when }}{% if e.when and e.where %} | {% endif %}{{ e.where }}</p>
     {% elsif include.show_posted %}<p class="kmb-tile-meta">{{ e.posted | date: "%B %Y" }}</p>{% endif %}
     <h3>{{ e.title }}</h3>
     {% if e.blurb %}<p>{{ e.blurb }}</p>{% endif %}

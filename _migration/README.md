@@ -2,7 +2,7 @@
 
 These scripts produced the site content from the live WordPress install
 at keepmebreathing.com. They are **not** part of the website build (Jekyll
-ignores this folder) and you only need them if you want to re-import - for
+ignores this folder) and you only need them if you want to re-import, for
 example to pick up posts published on WordPress before DNS is switched over.
 
 ```bash
