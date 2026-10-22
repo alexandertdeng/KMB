@@ -42,6 +42,26 @@
     toggle();
   }
 
+  // ---- Click-to-zoom images: <a data-zoom href="large.jpg"><img></a> ----
+  var zoomLinks = document.querySelectorAll('a[data-zoom]');
+  if (zoomLinks.length && window.HTMLDialogElement) {
+    var zoom = document.createElement('dialog');
+    zoom.className = 'kmb-zoom';
+    zoom.innerHTML = '<button class="kmb-zoom-close" type="button" aria-label="Close">&times;</button><img alt="">';
+    document.body.appendChild(zoom);
+    var zoomImg = zoom.querySelector('img');
+    zoomLinks.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        zoomImg.src = a.href;
+        zoomImg.alt = (a.querySelector('img') || {}).alt || '';
+        zoom.showModal();
+      });
+    });
+    // Close on the button or a click outside the picture (Esc works natively)
+    zoom.addEventListener('click', function (e) { if (e.target !== zoomImg) zoom.close(); });
+  }
+
   // ---- Product gallery thumbnails ----
   document.querySelectorAll('[data-gallery]').forEach(function (g) {
     var main = g.querySelector('[data-gallery-main]');

@@ -41,6 +41,8 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
   ---
   ```
   Upload the image to `assets/uploads/2026/10/` first.
+  Add `press: true` if it is outside press coverage, and it will also be
+  listed on the Press & media page.
 - **Add an event**: add an entry to `_data/events.yml` with `kind: upcoming`, a
   `date:` (YYYY-MM-DD), `when`, `where`, `image`, and an optional `link` to book.
   Upcoming events hide themselves automatically once their date has passed.

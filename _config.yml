@@ -3,11 +3,11 @@
 # Most day-to-day changes (donate link, emails, socials) live here.
 # ---------------------------------------------------------------
 title: Keep Me Breathing
-tagline: Driving research for CCHS treatment worldwide
+tagline: Driving cures and treatments for CCHS worldwide
 description: >-
-  Keep Me Breathing is a UK registered charity (no. 1201757) driving research
-  for CCHS (Congenital Central Hypoventilation Syndrome) treatment worldwide.
-  100% of donations fund research.
+  Keep Me Breathing is a UK registered charity (no. 1201757) driving cures and
+  treatments for CCHS (Congenital Central Hypoventilation Syndrome) worldwide.
+  Over 90p of every £1 donated goes straight into developing cures and treatments for CCHS.
 # ---- Where the site lives ----
 # PREVIEW (now): https://alexandertdeng.github.io/KMB/
 # GO-LIVE: set url to https://keepmebreathing.com, baseurl to "", preview to
@@ -33,27 +33,28 @@ donate:
   provider: JustGiving
   amounts: [10, 25, 50, 100]
 
-# Optional: a newsletter signup form endpoint (e.g. a Klaviyo or Mailchimp
-# hosted signup page). Empty = the "Sign me up" button opens a pre-filled email.
+# Newsletter signups. With a Klaviyo form_id, KMB's embedded Klaviyo signup
+# form appears wherever the "Sign up" block is. Otherwise newsletter_url (a
+# hosted signup page) is used, and if that is empty too, a pre-filled email.
+klaviyo:
+  company_id: VytJdd
+  form_id: UWzC2P
 newsletter_url: ""
 
 email:
   general: info@keepmebreathing.com
   sarah: sarah@keepmebreathing.com
   james: james@keepmebreathing.com
-  press: steph@keepmebreathing.com
+  press: sarah@keepmebreathing.com
   shop: info@keepmebreathing.com
 
 social:
   facebook: https://www.facebook.com/keepmebreathingfb
   instagram: https://www.instagram.com/keepmebreathinginsta/
-  twitter: https://twitter.com/keepmebreathtwt
   youtube: https://www.youtube.com/channel/UCkoubPAcZGiVuyfKIxGU27Q
   linkedin: https://uk.linkedin.com/company/keep-me-breathing
 
 # SEO (jekyll-seo-tag)
-twitter:
-  username: keepmebreathtwt
 social_links: []
 author: Keep Me Breathing
 

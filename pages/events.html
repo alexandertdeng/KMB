@@ -11,7 +11,7 @@ hero_ctas:
 ---
 {% include page-hero.html %}
 {%- assign today = site.time | date: "%Y-%m-%d" -%}
-{%- assign upcoming = site.data.events | where: "kind", "upcoming" | sort: "date" -%}
+{%- assign upcoming = site.data.events | where: "kind", "upcoming" | sort: "date", "last" -%}
 <section class="kmb-body">
   <div class="kmb-wrap">
     <div class="kmb-section-head">

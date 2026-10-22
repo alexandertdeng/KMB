@@ -1,4 +1,13 @@
 # Events. kind: upcoming | past | talk
+- title: Music with Mike – The Christmas Gig!
+  kind: upcoming
+  posted: '2026-10-22'
+  image: /assets/uploads/elementor/thumbs/music_with_mike_christmas_1080x1080-2-rv4qukbx6xwkupm6yxyxclif8sol0jzjl5kdi521hs.png
+  when: 12 December 26
+  where: Court Bushes, Hurstpierpoint
+  date: '2026-12-12'
+  link: https://www.happity.co.uk/schedules/keep-me-breathing-hurstpierpoint-court-bushes-community-hub-music-with-mike-the-big-christmas-gig-saturdays-10-30-12-00
+  link_text: Book tickets
 - title: Wheely Fun Club
   kind: upcoming
   posted: '2026-09-25'
