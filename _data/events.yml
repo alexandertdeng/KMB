@@ -1,5 +1,5 @@
 # Events. kind: upcoming | past | talk
-- title: Music with Mike – The Christmas Gig!
+- title: "Music with Mike: The Christmas Gig!"
   kind: upcoming
   posted: '2026-10-22'
   image: /assets/uploads/elementor/thumbs/music_with_mike_christmas_1080x1080-2-rv4qukbx6xwkupm6yxyxclif8sol0jzjl5kdi521hs.png
@@ -30,13 +30,13 @@
   date: '2026-10-03'
   link: https://www.happity.co.uk/schedules/keep-me-breathing-hove-rockwater-hove-mini-music-makers-party-in-the-woods
   link_text: Book tickets
-- title: 2026 Global CCHS Research Conference – Speaking
+- title: 2026 Global CCHS Research Conference (speaking)
   kind: talk
   posted: '2026-06-11'
   when: 22 – 23 October 26
   where: Lisbon
   date: '2026-10-23'
-- title: ARTP Conference – Speaking
+- title: ARTP Conference (speaking)
   kind: talk
   posted: '2025-12-15'
   when: 21 – 22 May 26
@@ -84,43 +84,43 @@
   kind: past
   posted: '2025-07-07'
   image: /assets/uploads/2025/07/SkyDIve-for-KMB-2-1024x1024.jpg
-- title: Home Ventilation Meeting – Speaking
+- title: Home Ventilation Meeting (speaking)
   kind: talk
   posted: '2025-06-10'
   when: 27 June 25
   where: London
   date: '2025-06-27'
-- title: PCRS Respiratory Conference – Stand
+- title: PCRS Respiratory Conference (stand)
   kind: talk
   posted: '2025-06-10'
   when: 18 – 20 September 25
   where: Telford
   date: '2025-09-20'
-- title: Best Practice Birmingham – Speaking
+- title: Best Practice Birmingham (speaking)
   kind: talk
   posted: '2025-06-10'
   when: 8 – 9 October 25
   where: Birmingham
   date: '2025-10-09'
-- title: World Orphan Drug Congress Europe – Speaking
+- title: World Orphan Drug Congress Europe (speaking)
   kind: talk
   posted: '2025-06-10'
   when: 27 – 29 October 25
   where: Amsterdam
   date: '2025-10-29'
-- title: Festival of Genomics and Biodata London – Speaking
+- title: Festival of Genomics and Biodata London (speaking)
   kind: talk
   posted: '2025-06-10'
   when: 28 – 29 January 26
   where: London
   date: '2026-01-29'
-- title: 24th Orphan Drugs and Rare Diseases Global Congress – Speaking
+- title: 24th Orphan Drugs and Rare Diseases Global Congress (speaking)
   kind: talk
   posted: '2025-06-10'
   when: 26 – 27 March 26
   where: London
   date: '2026-03-27'
-- title: Rare Neuro / CNS Partnering Cohort – Speaking
+- title: Rare Neuro / CNS Partnering Cohort (speaking)
   kind: talk
   posted: '2025-06-09'
   when: 25 June 25

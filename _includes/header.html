@@ -1,6 +1,6 @@
 <header class="kmb-header">
   <div class="kmb-header-inner">
-    <a class="kmb-brand" href="{{ '/' | relative_url }}" aria-label="Keep Me Breathing - home">
+    <a class="kmb-brand" href="{{ '/' | relative_url }}" aria-label="Keep Me Breathing home page">
       <img src="{{ site.logo | relative_url }}" alt="Keep Me Breathing" width="300" height="134">
     </a>
     <button class="kmb-menu-btn" type="button" aria-expanded="false" aria-controls="kmb-nav" aria-label="Menu"><span></span></button>
@@ -28,6 +28,7 @@
         {%- endfor %}
       </ul>
     </nav>
+    <a class="kmb-header-shop" href="{{ '/shop/' | relative_url }}"{% if page.url == '/shop/' %} aria-current="page"{% endif %}>Shop</a>
     <a class="kmb-btn kmb-btn--blue kmb-header-donate" href="{{ '/contribute/' | relative_url }}">Donate</a>
   </div>
 </header>

@@ -4,9 +4,11 @@
     {% if page.eyebrow %}<p class="kmb-eyebrow">{{ page.eyebrow }}</p>{% endif %}
     <h1>{{ page.hero_title | default: page.title }}</h1>
     {% if page.lede %}<p class="kmb-page-lede">{{ page.lede }}</p>{% endif %}
-    {% if page.hero_ctas %}
+    {% if page.hero_ctas or page.hero_call %}
+    {%- assign solid_first = true -%}{%- if page.hero_call -%}{%- assign solid_first = false -%}{%- endif %}
     <div class="kmb-hero-ctas">
-      {% for cta in page.hero_ctas %}<a class="kmb-btn {% if forloop.first %}kmb-btn--solid{% else %}kmb-btn--ghost{% endif %}" href="{% if cta.url contains ':' %}{{ cta.url }}{% else %}{{ cta.url | relative_url }}{% endif %}">{{ cta.title }}</a>{% endfor %}
+      {% if page.hero_call %}{% include call-button.html class="kmb-btn--solid" label=page.hero_call %}{% endif %}
+      {% for cta in page.hero_ctas %}<a class="kmb-btn {% if forloop.first and solid_first %}kmb-btn--solid{% else %}kmb-btn--ghost{% endif %}" href="{% if cta.url contains ':' %}{{ cta.url }}{% else %}{{ cta.url | relative_url }}{% endif %}">{{ cta.title }}</a>{% endfor %}
     </div>
     {% endif %}
     {% if page.hero_image %}</div>

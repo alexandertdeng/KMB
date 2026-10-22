@@ -1,4 +1,4 @@
-# Keep Me Breathing - website
+# Keep Me Breathing website
 
 The keepmebreathing.com website, rebuilt as a static site for **GitHub Pages**.
 Every page uses the "house style" of the homepage: navy NHS-blue bands,
@@ -49,7 +49,11 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
   Switch `kind` to `past` to show them in the past-events gallery.
 - **Add a conference talk**: add an entry with `kind: talk`, `when`, `where` and `date`.
 - **Add a product**: copy a file in `_products/`, change the details and images.
-- **Edit the menu**: `_data/navigation.yml`.
+- **Edit the menu**: `_data/navigation.yml`. Five sections; the first link in
+  each is that section's landing page. Donate and Shop sit beside the menu.
+- **Add a call-booking link for major gifts**: paste it (e.g. Calendly) into
+  `major_gifts.call_url` in `_config.yml`. Until then, "Book a call" buttons
+  open a pre-filled email to the founders.
 
 ## Things that changed from WordPress
 

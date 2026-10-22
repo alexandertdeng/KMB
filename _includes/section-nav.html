@@ -1,0 +1,13 @@
+{%- comment -%}
+  Pill links to the other pages in one menu section, read from
+  _data/navigation.yml. Usage: include section-nav.html section="CCHS"
+{%- endcomment -%}
+{%- assign nav_section = site.data.navigation | where: "title", include.section | first -%}
+<nav class="kmb-section-nav" aria-label="{{ include.section }} pages">
+  <p class="kmb-eyebrow">In this section</p>
+  <ul>
+    {%- for child in nav_section.children %}{% if child.url and child.url != page.url %}
+    <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+    {%- endif %}{% endfor %}
+  </ul>
+</nav>

@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-# Keep Me Breathing - site settings
+# Keep Me Breathing: site settings
 # Most day-to-day changes (donate link, emails, socials) live here.
 # ---------------------------------------------------------------
 title: Keep Me Breathing
@@ -41,6 +41,14 @@ klaviyo:
   form_id: UWzC2P
 newsletter_url: ""
 
+# Major gifts: who philanthropists speak to, and where "Book a call" goes.
+# Add a booking link (e.g. Calendly) as call_url; while it's empty the
+# button opens a pre-filled email to the contact below instead.
+major_gifts:
+  contact: James Oakley
+  email: james@keepmebreathing.com
+  call_url: ""
+
 email:
   general: info@keepmebreathing.com
   sarah: sarah@keepmebreathing.com
@@ -59,7 +67,7 @@ social_links: []
 author: Keep Me Breathing
 
 # ---------------------------------------------------------------
-# Build settings - you shouldn't need to change these
+# Build settings (you shouldn't need to change these)
 # ---------------------------------------------------------------
 permalink: /:year/:month/:day/:title/
 timezone: Europe/London

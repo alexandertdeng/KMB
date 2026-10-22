@@ -1,0 +1,92 @@
+---
+layout: default
+title: Major gifts & philanthropy
+permalink: /major-gifts/
+eyebrow: Major gifts & philanthropy
+hero_title: Fund the first treatment made for <em>CCHS</em>
+lede: The technology to change the lives of children with CCHS exists. The investment does not. If you are in a position to help change that, our founders would like to talk to you.
+hero_call: Book a call with our founders
+hero_ctas:
+  - { title: See what we’re building, url: /our-research/ }
+description: Make a major gift to Keep Me Breathing and help fund the first treatments designed for CCHS. Speak directly with our founders.
+---
+{% include page-hero.html %}
+
+<section class="kmb-section">
+  <div class="kmb-wrap">
+    <p class="kmb-note kmb-family-note"><strong>Has your child just been diagnosed?</strong> First, breathe. Our <a href="{{ '/cchs-newborn-and-diagnosis-what-to-do-next-specialists-and-new-treatments/' | relative_url }}">guide for newly diagnosed families</a> covers what CCHS means and what to do first. James and Steph have been exactly where you are, and are happy to talk whether or not you are thinking about giving.</p>
+    <div class="kmb-cols" style="margin-top:56px">
+      <div>
+        <p class="kmb-eyebrow">Why a major gift matters</p>
+        <h2>No one else is going to build this</h2>
+        <p class="kmb-section-lede">For children like Casper, Beau and Tiger-Lily, and thousands of others around the world, the standard treatment is to be connected to artificial life support for the rest of their lives.</p>
+        <p class="kmb-section-lede">Because the “market size” for CCHS is so small, no pharmaceutical or med tech company has any plans to invest in CCHS. So it’s down to us, and people like you.</p>
+      </div>
+      <div class="kmb-cchs-facts">
+        <div class="kmb-fact"><strong>Real progress</strong>A patent filed for continuous CO₂ monitoring, and VENTO, our wearable CO₂ monitor, validated by the Extreme Environments Lab at the University of Portsmouth.</div>
+        <div class="kmb-fact"><strong>Backed by science</strong>Our accelerated five-year plan is endorsed by over 130 doctors, scientists and medical professionals.</div>
+        <div class="kmb-fact"><strong>Lean by design</strong>A small core team means over 90p of every £1 goes straight into developing treatment.</div>
+        <div class="kmb-fact"><strong>Run like a start-up</strong>Founded by Casper’s parents and guided by a medical and entrepreneurial advisory board of CCHS specialists and founders.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kmb-section kmb-research">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">What your gift would fund</p>
+    <h2>The treatments we’re funding</h2>
+    {% include projects.html %}
+    <div class="kmb-arrow-links">
+      <a class="kmb-arrow-link" href="{{ '/our-research/' | relative_url }}">See our research and roadmap</a>
+      <a class="kmb-arrow-link" href="{{ '/medical-endorsement-of-keep-me-breathing/' | relative_url }}">Who backs our plan</a>
+    </div>
+  </div>
+</section>
+
+<section class="kmb-section">
+  <div class="kmb-wrap">
+    <p class="kmb-eyebrow">Who you’ll talk to</p>
+    <h2>Our founders, Casper’s parents</h2>
+    <div class="kmb-founders">
+      <div class="kmb-founder">
+        <img alt="James Oakley" loading="lazy" src="{{ '/assets/uploads/2022/11/9G7KBP44YS4B94vLNtAtSS_square_large-1.jpeg' | relative_url }}"/>
+        <div>
+          <h3>James Oakley</h3>
+          <p class="kmb-card-sub">Founder and CEO | Casper &amp; Max’s Dad</p>
+          <p>“I’m a Dad of two fighting to save our second son’s life by developing treatments and cures to a rare disease with our Foundation Charity, run like a start up business.”</p>
+        </div>
+      </div>
+      <div class="kmb-founder">
+        <img alt="Stephanie Roberts" loading="lazy" src="{{ '/assets/uploads/elementor/thumbs/rsz_20221123_114631-1-e1669290297698-pzg0otqmez4jngqdnhd06xjs60if55sp4m6o7re1zc.jpg' | relative_url }}"/>
+        <div>
+          <h3>Stephanie Roberts</h3>
+          <p class="kmb-card-sub">Founder | Casper &amp; Max’s Mum</p>
+          <p>“This is not a choice. The technology to make a world of difference to the lives of children with CCHS is there. But the investment is not.”</p>
+        </div>
+      </div>
+    </div>
+    <p class="kmb-section-lede">Our Director of Fundraising &amp; Strategic Partnerships, Tanya Addison, can also help with gifts from trusts, foundations and companies. <a class="kmb-arrow-link" href="{{ '/keep-me-breathing-team-and-advisory-board/' | relative_url }}">Meet the whole team</a></p>
+  </div>
+</section>
+
+<section class="kmb-section kmb-research">
+  <div class="kmb-wrap">
+    <div class="kmb-cols">
+      <div>
+        <p class="kmb-eyebrow">Ways to give</p>
+        <h2>Give in the way that suits you</h2>
+        <p class="kmb-section-lede">We’ll talk you through how your gift would be used, and keep you fully updated on progress as it is made.</p>
+      </div>
+      <div class="kmb-cchs-facts">
+        <div class="kmb-fact"><strong>Personal gifts</strong>One-off or multi-year gifts from you or your family.</div>
+        <div class="kmb-fact"><strong>Trusts, foundations &amp; companies</strong>Gifts through a family foundation, charitable trust or your business, including corporate matching.</div>
+        <div class="kmb-fact"><strong>Gift Aid</strong>If you’re a UK taxpayer, Gift Aid adds 25p to every £1 you give, at no extra cost to you.</div>
+        <div class="kmb-fact"><strong>Legacies</strong>Leaving a gift to Keep Me Breathing in your will.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- capture talk_text -%}Book a call with James and Steph, or email <a href="mailto:{{ site.major_gifts.email }}" style="color:#fff">{{ site.major_gifts.email }}</a> directly.{%- endcapture -%}
+{% include cta-band.html eyebrow="Major gifts" heading="Let’s talk" text=talk_text link="Prefer to give online? Donate" link_url="/contribute/" %}
