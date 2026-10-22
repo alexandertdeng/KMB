@@ -16,7 +16,7 @@
     - { title: Mask vs tracheostomy vs pacer, url: /cchs-mask-vs-tracheostomy-vs-pacer/ }
     - { title: CCHS treatment and options, url: /cchs-treatment-and-options/ }
     - { title: Quality of life research, url: /cchsqualityoflife/ }
-    - { title: Research partners, url: /partners/ }
+    - { title: Our partners, url: /partners/ }
     - { label: Stories }
     - { title: Casper’s story, url: /caspersstory/ }
     - { title: Beau’s story, url: /beaus-story/ }
@@ -24,10 +24,8 @@
 - title: Updates
   children:
     - { title: KMB updates, url: /updates/ }
-    - { title: Technology update, url: /technology-update/ }
     - { title: News bulletins, url: /read-our-bi-monthly-news-bulletins-below/ }
     - { title: Press & media, url: /keep-me-breathing-press/ }
-    - { title: Subscribe, url: /subscribe-for-our-news-and-updates/ }
 - title: Events
   children:
     - { title: Upcoming events, url: /events/ }

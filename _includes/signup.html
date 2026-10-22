@@ -1,0 +1,16 @@
+{%- comment -%}
+  Newsletter signup: KMB's embedded Klaviyo form, else a hosted signup link,
+  else a pre-filled email. Set these in _config.yml (klaviyo / newsletter_url).
+{%- endcomment -%}
+{%- capture signup_mailto -%}mailto:{{ site.email.general }}?subject=Please%20sign%20me%20up%20for%20KMB%20treatment%20updates&amp;body=Hi%20Keep%20Me%20Breathing%20team%2C%0A%0APlease%20add%20me%20to%20the%20treatment%20updates%20list.%0A%0AThank%20you!{%- endcapture -%}
+{% if site.klaviyo.form_id and site.klaviyo.form_id != "" %}
+<div class="kmb-signup">
+  <div class="klaviyo-form-{{ site.klaviyo.form_id }}"></div>
+  <p class="kmb-signup-alt">Can’t see the form? <a href="{{ signup_mailto }}">Sign up by email</a></p>
+</div>
+<script async src="https://static.klaviyo.com/onsite/js/{{ site.klaviyo.company_id }}/klaviyo.js"></script>
+{% elsif site.newsletter_url and site.newsletter_url != "" %}
+<a class="kmb-btn kmb-btn--blue" href="{{ site.newsletter_url }}" rel="noopener">Sign me up</a>
+{% else %}
+<a class="kmb-btn kmb-btn--blue" href="{{ signup_mailto }}">Sign me up by email</a>
+{% endif %}

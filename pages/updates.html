@@ -22,7 +22,7 @@ hero_ctas:
     </div>
     {% endif %}
     <div class="kmb-tiles">
-      {% for post in site.posts %}{% include post-tile.html post=post %}{% endfor %}
+      {% for post in site.posts %}{% include post-tile.html post=post full=true %}{% endfor %}
     </div>
   </div>
 </section>
