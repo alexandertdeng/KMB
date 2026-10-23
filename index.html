@@ -9,17 +9,17 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 <div class="kmb-wrap">
 <div class="kmb-hero-inner">
 <div>
-<p class="kmb-eyebrow">Registered charity no. 1201757 | Brighton, UK</p>
+<p class="kmb-eyebrow"><a href="{{ site.charity.register_url }}" rel="noopener">Registered charity no. {{ site.charity.number }}</a> | {{ site.charity.location }}</p>
 <h1>Driving cures and treatments for <em>CCHS</em></h1>
 <p class="kmb-hero-lede">
             Children born with Congenital Central Hypoventilation Syndrome (CCHS)
             stop breathing when they fall asleep. There is no cure and no treatment
             beyond artificial ventilation, <strong>yet</strong>. Keep Me Breathing
             exists to change that, by researching cures and developing and funding
-            advanced technology that will let every child with CCHS sleep safely.
+            advanced technology that will let every child and adult with CCHS sleep safely.
           </p>
 <div class="kmb-hero-ctas">
-<a class="kmb-btn kmb-btn--solid" href="{{ '/contribute/' | relative_url }}">DONATE</a>
+<a class="kmb-btn kmb-btn--solid" href="{{ '/contribute/' | relative_url }}">Donate</a>
 <a class="kmb-btn kmb-btn--ghost" href="{{ '/cchs-newborn-and-diagnosis-what-to-do-next-specialists-and-new-treatments/' | relative_url }}">Newly diagnosed? Start here</a>
 </div>
 <div class="kmb-hero-pledge">
@@ -40,20 +40,20 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 <div class="kmb-wrap">
 <div class="kmb-stats-grid">
 <div class="kmb-stat">
+<div class="kmb-stat-num">11,000<sup>+</sup></div>
+<div class="kmb-stat-label">People aged 21 or under estimated to be living with CCHS worldwide</div>
+</div>
+<div class="kmb-stat">
+<div class="kmb-stat-num">130<sup>+</sup></div>
+<div class="kmb-stat-label">Medical &amp; rare disease professionals have signed a letter backing our mission</div>
+</div>
+<div class="kmb-stat">
 <div class="kmb-stat-num">Patent filed</div>
 <div class="kmb-stat-label">For continuous CO₂ monitoring</div>
 </div>
 <div class="kmb-stat">
-<div class="kmb-stat-num">130<sup>+</sup></div>
-<div class="kmb-stat-label">Doctors &amp; scientists have endorsed our treatment plan</div>
-</div>
-<div class="kmb-stat">
-<div class="kmb-stat-num">1 : 120,000</div>
-<div class="kmb-stat-label">Live births affected by CCHS</div>
-</div>
-<div class="kmb-stat">
 <div class="kmb-stat-num">Lobbying</div>
-<div class="kmb-stat-label">for the genetic cause of CCHS to be added to the NHS gene panel for unexplained death in infancy childhood</div>
+<div class="kmb-stat-label">for the genetic cause of CCHS to be added to the NHS gene panel for unexplained death in infancy and childhood</div>
 </div>
 </div>
 </div>
@@ -64,9 +64,9 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 <p class="kmb-eyebrow">Start here</p>
 <h2 id="start-here">Where would you like to start?</h2>
 <div class="kmb-help-grid">
-<a class="kmb-help-card" href="{{ '/cchs-newborn-and-diagnosis-what-to-do-next-specialists-and-new-treatments/' | relative_url }}">
-<h3>My child has just been diagnosed</h3>
-<p>First, breathe. What CCHS means, what to do first, and who to talk to.</p>
+<a class="kmb-help-card" href="{{ '/cchs-for-patients-and-parents/' | relative_url }}">
+<h3>My family lives with CCHS</h3>
+<p>Answers and support at every stage, from diagnosis to adult life.</p>
 </a>
 <a class="kmb-help-card" href="{{ '/major-gifts/' | relative_url }}">
 <h3>I want to fund a breakthrough</h3>
@@ -104,6 +104,24 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 </div>
 </div>
 </section>
+<!-- ============ LATEST NEWS ============ -->
+<section aria-labelledby="latest-news" class="kmb-section kmb-latest">
+<div class="kmb-wrap">
+<div class="kmb-section-head">
+<div>
+<p class="kmb-eyebrow">Latest news</p>
+<h2 id="latest-news">What’s happening at Keep Me Breathing</h2>
+</div>
+<div class="kmb-arrow-links">
+<a class="kmb-arrow-link" href="{{ '/updates/' | relative_url }}">All updates</a>
+<a class="kmb-arrow-link" href="{{ '/events/' | relative_url }}">Upcoming events</a>
+</div>
+</div>
+<div class="kmb-tiles">
+{% for post in site.posts limit: 3 %}{% include post-tile.html post=post %}{% endfor %}
+</div>
+</div>
+</section>
 <!-- ============ TALK TO OUR FOUNDERS ============ -->
 {% include cta-band.html %}
 <!-- ============ SUPPORTERS & PARTNER ============ -->
@@ -125,13 +143,19 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 </div>
 </div>
 </div>
+<div class="kmb-wrap kmb-supporters-more">
+<a class="kmb-arrow-link" href="{{ '/partners/' | relative_url }}">Companies: partner with us</a>
+</div>
 </section>
 <!-- ============ PRESS ============ -->
 <section aria-label="As featured in" class="kmb-press">
 <div class="kmb-wrap">
 <p class="kmb-eyebrow">As featured in</p>
 {% include press-logos.html %}
+<div class="kmb-press-links">
 <a class="kmb-arrow-link" href="{{ '/keep-me-breathing-press/' | relative_url }}">See our press &amp; media coverage</a>
+<a class="kmb-arrow-link" href="mailto:{{ site.email.press }}">Journalists: press enquiries</a>
+</div>
 </div>
 </section>
 

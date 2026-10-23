@@ -9,7 +9,7 @@
     - { title: CCHS treatment and options, url: /cchs-treatment-and-options/ }
     - { title: Mask vs tracheostomy vs pacer, url: /cchs-mask-vs-tracheostomy-vs-pacer/ }
     - { title: How many people have CCHS?, url: /how-many-patients-with-cchs/ }
-    - { title: Quality of life research, url: /cchsqualityoflife/ }
+    - { title: Quality of life research, url: /quality-of-life/ }
     - { label: Family stories }
     - { title: Casper’s story, url: /caspersstory/ }
     - { title: Beau’s story, url: /beaus-story/ }
@@ -17,26 +17,27 @@
 - title: Our research
   children:
     - { title: The treatments we’re funding, url: /our-research/ }
-    - { title: Backed by 130+ clinicians, url: /medical-endorsement-of-keep-me-breathing/ }
+    - { title: Our letter of support, url: /medical-endorsement-of-keep-me-breathing/ }
     - { title: For clinicians & researchers, url: /cchs-for-professionals/ }
     - { title: Conferences & talks, url: /conferences/ }
 - title: Ways to help
   children:
+    - { title: All ways to help, url: /get-involved/ }
     - { title: Donate, url: /contribute/ }
     - { title: Major gifts & philanthropy, url: /major-gifts/ }
-    - { title: Fundraise, url: /sm-version-fundraising/ }
+    - { title: Fundraise, url: /fundraise/ }
     - { title: Upcoming events, url: /events/ }
-    - { title: Past events, url: /gallery/ }
+    - { title: Past events, url: /past-events/ }
     - { title: Volunteer, url: /volunteer-network/ }
     - { title: Shop, url: /shop/ }
 - title: News
   children:
     - { title: Latest updates, url: /updates/ }
     - { title: Press & media, url: /keep-me-breathing-press/ }
-    - { title: News bulletins, url: /read-our-bi-monthly-news-bulletins-below/ }
+    - { title: News bulletins, url: /news-bulletins/ }
 - title: About us
   children:
     - { title: Our mission, url: /our-mission/ }
     - { title: Our team, url: /keep-me-breathing-team-and-advisory-board/ }
     - { title: Our partners, url: /partners/ }
-    - { title: Contact, url: /contact-page/ }
+    - { title: Contact, url: /contact/ }

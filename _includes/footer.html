@@ -2,7 +2,8 @@
   <section class="kmb-close">
     <div class="kmb-wrap">
       <p class="kmb-close-meta">
-        Registered charity no. {{ site.charity.number }}  | 
+        <a href="{{ site.charity.register_url }}" rel="noopener">Registered charity no. {{ site.charity.number }}</a>  | 
+        <a href="{{ site.charity.register_url }}/accounts-and-annual-returns" rel="noopener">Accounts</a>  | 
         <a href="{{ '/our-research/' | relative_url }}">Our research</a>  | 
         <a href="{{ '/major-gifts/' | relative_url }}">Major gifts</a>  | 
         <a href="{{ '/keep-me-breathing-team-and-advisory-board/' | relative_url }}">Meet the team</a>  | 
@@ -10,7 +11,7 @@
         <a href="{{ '/keep-me-breathing-press/' | relative_url }}">Press</a>  | 
         <a href="{{ '/subscribe-for-our-news-and-updates/' | relative_url }}">Newsletter</a>  | 
         <a href="{{ '/shop/' | relative_url }}">Shop</a>  | 
-        <a href="{{ '/contact-page/' | relative_url }}">Contact</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
       </p>
       <p class="kmb-social">
         <a href="{{ site.social.facebook }}" rel="noopener" aria-label="Keep Me Breathing on Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
@@ -22,7 +23,7 @@
   </section>
   <div class="kmb-legal">
     <div class="kmb-wrap">
-      <span>© {{ site.time | date: "%Y" }} Keep Me Breathing. Registered charity in England &amp; Wales no. {{ site.charity.number }}.</span>
+      <span>© {{ site.time | date: "%Y" }} Keep Me Breathing. <a href="{{ site.charity.register_url }}" rel="noopener">Registered charity in England &amp; Wales no. {{ site.charity.number }}</a>.</span>
       <span><a href="mailto:{{ site.email.general }}">{{ site.email.general }}</a></span>
     </div>
   </div>
