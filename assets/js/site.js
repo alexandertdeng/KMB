@@ -88,6 +88,15 @@
     });
   });
 
+  // ---- Newsletter: show the email fallback only if Klaviyo's form never loads ----
+  document.querySelectorAll('.kmb-signup').forEach(function (s) {
+    var form = s.querySelector('[class^="klaviyo-form-"]');
+    var alt = s.querySelector('.kmb-signup-alt');
+    if (!form || !alt) return;
+    alt.hidden = true;
+    setTimeout(function () { if (!form.children.length) alt.hidden = false; }, 6000);
+  });
+
   // ---- Category filter chips (updates page) ----
   var chips = document.querySelectorAll('.kmb-chip');
   chips.forEach(function (chip) {

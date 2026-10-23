@@ -67,7 +67,7 @@ server have been replaced:
 | Contact Form 7 / Elementor forms | Email cards (`mailto:`), the same pattern the homepage already used. |
 | Klaviyo newsletter signup | The **Sign me up** button opens a pre-filled email. Set `newsletter_url` in `_config.yml` to a Klaviyo/Mailchimp hosted signup page to use that instead. |
 | Raffle / lottery, donor dashboard, my-account | Retired. The old URLs redirect to the nearest useful page. |
-| Event detail pages (`/events/<name>/`) | These were blank on the old site. Events now live as cards on `/events/`, `/gallery/` and `/conferences/`, and old URLs redirect there. |
+| Event detail pages (`/events/<name>/`) | These were blank on the old site. Events now live as cards on `/events/`, `/past-events/` and `/conferences/`, and old URLs redirect there. |
 
 All page and post URLs are unchanged, so existing links and search rankings carry over.
 

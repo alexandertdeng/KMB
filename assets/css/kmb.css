@@ -63,7 +63,7 @@
 
 .kmb-eyebrow {
   font-family: var(--kmb-mono);
-  font-size: 12.2px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -241,13 +241,10 @@
 }
 .kmb-stat-num sup { font-size: 0.55em; color: var(--kmb-trace); }
 .kmb-stat-label {
-  font-family: var(--kmb-mono);
-  font-size: 11.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 15px;
   color: var(--kmb-light-mut);
   margin-top: 8px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ================= SUPPORTERS ================= */
@@ -283,6 +280,8 @@
 }
 .kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); }
 .kmb-supporters-group + .kmb-supporters-group { border-left: 1px solid var(--kmb-tint); }
+/* "Companies: partner with us" link under the logos */
+.kmb-supporters-more { margin-top: 22px; }
 @media (max-width: 760px) {
   .kmb-supporters-row { flex-direction: column; }
   .kmb-supporters-group + .kmb-supporters-group { border-left: 0; border-top: 1px solid var(--kmb-tint); padding-top: 24px; }
@@ -456,6 +455,9 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-help-card:hover h3::after { transform: translateX(4px); }
 .kmb-help-card p { margin-top: 11.2px; font-size: clamp(15px, 14px + 0.25vw, 17.5px); color: var(--kmb-body); }
 @media (prefers-reduced-motion: reduce) { .kmb-help-card:hover h3::after { transform: none; } }
+/* Hero eyebrow: the charity number links to the register */
+.kmb-hero .kmb-eyebrow a { color: inherit; text-decoration: underline; text-decoration-color: transparent; }
+.kmb-hero .kmb-eyebrow a:hover { text-decoration-color: currentColor; }
 
 /* Research programme checklist */
 .kmb-scope {
@@ -617,6 +619,7 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 }
 .kmb-contact-card:hover span { text-decoration: underline; }
 .kmb-press .kmb-arrow-link { display: inline-block; margin-top: 22.4px; }
+.kmb-press-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 32px; }
 
 /* Contact */
 .kmb-contact { border-top: 1px solid var(--kmb-tint); }
@@ -626,6 +629,7 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-newsletter .kmb-wrap { padding-block: clamp(40px, 5vw, 64px); }
 .kmb-home .kmb-signup-alt { margin-top: 10px; font-size: 14px; color: var(--kmb-body); }
 .kmb-signup-alt a { color: var(--kmb-blue); text-decoration: underline; text-underline-offset: 3px; }
+.kmb-signup [class^="klaviyo-form-"] { min-height: 56px; }
 /* "Follow our progress" signup: same language as the Start here cards */
 .kmb-follow {
   margin-top: 36px;
@@ -655,15 +659,12 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 }
 .kmb-close .kmb-wrap { padding-block: clamp(32px, 4vw, 44px); }
 .kmb-close .kmb-close-meta {
-  font-family: var(--kmb-mono);
-  font-size: 11.8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 15px;
   color: var(--kmb-light-mut);
   margin-top: 0;
   line-height: 2.1;
 }
-.kmb-close-meta a { color: var(--kmb-light); }
+.kmb-close-meta a { color: var(--kmb-light); margin-inline: 0.35em; }
 .kmb-close-meta a:hover { color: var(--kmb-trace); }
 /* Social media icons under the footer links */
 .kmb-social { display: flex; justify-content: center; gap: 22px; margin-top: 18px !important; }
@@ -1262,7 +1263,7 @@ a.kmb-tile:hover h3 { color: var(--kmb-blue); }
 .kmb-prose .kmb-tile-body > * { margin-top: 0; }
 .kmb-tile-meta {
   font-family: var(--kmb-mono);
-  font-size: 11.5px;
+  font-size: 12.5px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1502,7 +1503,7 @@ a.kmb-tile:hover h3 { color: var(--kmb-blue); }
 .kmb-router { padding-block: clamp(48px, 6vw, 84px); }
 
 /* "In this section" pill links at the top of section landing pages */
-.kmb-section-nav .kmb-eyebrow { font-size: 12.2px; }
+.kmb-section-nav .kmb-eyebrow { font-size: 13px; }
 .kmb-section-nav ul { list-style: none; padding: 0 !important; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 10px 26px; }
 .kmb-section-nav li { margin: 0 !important; font-size: 15px; }
 .kmb-section-nav a {

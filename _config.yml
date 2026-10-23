@@ -23,6 +23,8 @@ logo: /assets/uploads/2022/10/KMB-Blue-Logo-RGB.png
 charity:
   number: "1201757"
   location: Brighton, UK
+  # Our entry on the Charity Commission register (trustees, accounts).
+  register_url: https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5207327
 
 # Where the Donate buttons go. GitHub Pages is static, so donations are
 # taken by an external, PCI-compliant provider. Swap these for Stripe

@@ -2,12 +2,12 @@
 layout: default
 title: Upcoming events
 permalink: /events/
-eyebrow: Events
+eyebrow: Ways to help
 lede: Join us at a fundraiser, take on a challenge, or come and say hello. Every event brings the first CCHS treatments a step closer.
 description: Upcoming Keep Me Breathing fundraising events, challenges and community days.
 hero_ctas:
-  - { title: Fundraise for us, url: /sm-version-fundraising/ }
-  - { title: Past events, url: /gallery/ }
+  - { title: Fundraise for us, url: /fundraise/ }
+  - { title: Past events, url: /past-events/ }
 ---
 {% include page-hero.html %}
 {%- assign today = site.time | date: "%Y-%m-%d" -%}
@@ -19,13 +19,13 @@ hero_ctas:
         <p class="kmb-eyebrow">What’s on</p>
         <h2>Coming up</h2>
       </div>
-      <a class="kmb-arrow-link" href="{{ '/gallery/' | relative_url }}">View past events</a>
+      <a class="kmb-arrow-link" href="{{ '/past-events/' | relative_url }}">View past events</a>
     </div>
     <div class="kmb-tiles" data-upcoming>
       {%- for e in upcoming %}{% unless e.date and e.date < today %}{% include event-tile.html event=e %}{% endunless %}{% endfor %}
     </div>
     <div class="kmb-cchs-facts" style="margin-top:40px;max-width:760px">
-      <div class="kmb-fact"><strong>Hosting your own event?</strong>Bake sales, quiz nights, marathons, skydives: we’ll support you with a fundraising pack. Email <a href="mailto:{{ site.email.general }}" style="color:var(--kmb-blue)">{{ site.email.general }}</a> or read our <a href="{{ '/sm-version-fundraising/' | relative_url }}" style="color:var(--kmb-blue)">fundraising guide</a>.</div>
+      <div class="kmb-fact"><strong>Hosting your own event?</strong>Bake sales, quiz nights, marathons, skydives: we’ll support you with a fundraising pack. Email <a href="mailto:{{ site.email.general }}" style="color:var(--kmb-blue)">{{ site.email.general }}</a> or read our <a href="{{ '/fundraise/' | relative_url }}" style="color:var(--kmb-blue)">fundraising guide</a>.</div>
     </div>
   </div>
 </section>
