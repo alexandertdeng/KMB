@@ -52,7 +52,7 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
 - **Edit the menu**: `_data/navigation.yml`. Five sections; the first link in
   each is that section's landing page. Donate and Shop sit beside the menu.
 - **Add a call-booking link for major gifts**: paste it (e.g. Calendly) into
-  `major_gifts.call_url` in `_config.yml`. Until then, "Book a call" buttons
+  `major_gifts.call_url` in `_config.yml`. Until then, "Arrange a call" buttons
   open a pre-filled email to the founders.
 
 ## Things that changed from WordPress

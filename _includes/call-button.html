@@ -1,11 +1,11 @@
 {%- comment -%}
-  "Book a call" button for major gifts. Goes to major_gifts.call_url in
+  "Arrange a call" button for major gifts. Goes to major_gifts.call_url in
   _config.yml when set, otherwise opens a pre-filled email to the founders.
   Optional: label, class (default kmb-btn--blue), subject, body.
 {%- endcomment -%}
 {%- assign mg = site.major_gifts -%}
 {%- if mg.call_url and mg.call_url != "" -%}
-<a class="kmb-btn {{ include.class | default: 'kmb-btn--blue' }}" href="{{ mg.call_url }}" rel="noopener">{{ include.label | default: "Book a call with our founders" }}</a>
+<a class="kmb-btn {{ include.class | default: 'kmb-btn--blue' }}" href="{{ mg.call_url }}" rel="noopener">{{ include.label | default: "Arrange a call with our founders" }}</a>
 {%- else -%}
 {%- assign first_name = mg.contact | split: " " | first -%}
 {%- assign subject = include.subject | default: "I’d like to talk about a major gift" -%}
@@ -17,5 +17,5 @@ Best number to reach me:
 Good times to talk:
 
 Thank you{%- endcapture -%}
-<a class="kmb-btn {{ include.class | default: 'kmb-btn--blue' }}" href="mailto:{{ mg.email }}?subject={{ subject | uri_escape }}&amp;body={{ body | uri_escape }}">{{ include.label | default: "Book a call with our founders" }}</a>
+<a class="kmb-btn {{ include.class | default: 'kmb-btn--blue' }}" href="mailto:{{ mg.email }}?subject={{ subject | uri_escape }}&amp;body={{ body | uri_escape }}">{{ include.label | default: "Arrange a call with our founders" }}</a>
 {%- endif -%}

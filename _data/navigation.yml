@@ -17,14 +17,11 @@
 - title: Our research
   children:
     - { title: The treatments we’re funding, url: /our-research/ }
-    - { title: The Breathing Pacemaker, url: "/our-research/#pacemaker" }
-    - { title: VENTO, url: "/our-research/#vento" }
     - { title: Backed by 130+ clinicians, url: /medical-endorsement-of-keep-me-breathing/ }
     - { title: For clinicians & researchers, url: /cchs-for-professionals/ }
     - { title: Conferences & talks, url: /conferences/ }
-- title: Get involved
+- title: Ways to help
   children:
-    - { title: Ways to help, url: /get-involved/ }
     - { title: Donate, url: /contribute/ }
     - { title: Major gifts & philanthropy, url: /major-gifts/ }
     - { title: Fundraise, url: /sm-version-fundraising/ }
@@ -39,6 +36,7 @@
     - { title: News bulletins, url: /read-our-bi-monthly-news-bulletins-below/ }
 - title: About us
   children:
+    - { title: Our mission, url: /our-mission/ }
     - { title: Our team, url: /keep-me-breathing-team-and-advisory-board/ }
     - { title: Our partners, url: /partners/ }
     - { title: Contact, url: /contact-page/ }

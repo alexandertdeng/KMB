@@ -1,0 +1,11 @@
+{%- comment -%}
+  "As featured in" row of press outlets from _data/press.yml: the logo when
+  one is set, otherwise the outlet's name.
+{%- endcomment -%}
+<div class="kmb-press-row">
+  {%- for outlet in site.data.press %}
+  <span class="kmb-press-item">
+    {%- if outlet.logo %}<img class="kmb-press-img" src="{{ outlet.logo | relative_url }}" alt="{{ outlet.name }}" loading="lazy">{% else %}<span class="kmb-press-name">{{ outlet.name }}</span>{% endif -%}
+  </span>
+  {%- endfor %}
+</div>
