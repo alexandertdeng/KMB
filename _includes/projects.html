@@ -1,20 +1,8 @@
 {%- comment -%}
-  The two programmes KMB is building. Used on the homepage, Our research and
+  The two programmes KMB is building, VENTO first. Used on Our research and
   Major gifts. Pass anchors=true to give each card an id for menu links.
 {%- endcomment -%}
 <div class="kmb-projects">
-<article class="kmb-project"{% if include.anchors %} id="pacemaker"{% endif %}>
-<span class="kmb-project-tag">Treatment</span>
-<h3>The Breathing Pacemaker</h3>
-<p>
-            A fully implantable biofeedback phrenic-nerve pacing system, the
-            world’s first treatment designed specifically for CCHS. Like a
-            cardiac pacemaker for breathing, it will sense what the body needs and
-            adjust the rate and depth of every breath automatically. No wires, no
-            external kit, no mechanical ventilator.
-          </p>
-<p class="kmb-project-note">First patent filed</p>
-</article>
 <article class="kmb-project"{% if include.anchors %} id="vento"{% endif %}>
 <span class="kmb-project-tag">Monitoring</span>
 <h3>VENTO</h3>
@@ -25,5 +13,15 @@
             without needles or hospital hardware.
           </p>
 <p class="kmb-project-note">Patent pending</p>
+</article>
+<article class="kmb-project"{% if include.anchors %} id="closed-loop"{% endif %}>
+<span class="kmb-project-tag">Next stage</span>
+<h3>A closed-loop system</h3>
+<p>
+            Building on VENTO’s continuous CO₂ readings, a closed-loop system
+            would sense what the body needs and adjust breathing support
+            automatically, rather than relying on fixed ventilator settings.
+          </p>
+<p class="kmb-project-note">In research</p>
 </article>
 </div>

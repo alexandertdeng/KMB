@@ -83,69 +83,57 @@ image: /assets/uploads/2023/02/6-819x1024.jpg
 </div>
 </div>
 </section>
-<!-- ============ TALK TO OUR FOUNDERS ============ -->
-{% include cta-band.html %}
-<!-- ============ SUPPORTERS ============ -->
-<section aria-label="Our supporters" class="kmb-supporters">
+<!-- ============ OUR MISSION ============ -->
+<section aria-labelledby="our-mission" class="kmb-section kmb-research">
 <div class="kmb-wrap">
-<p class="kmb-eyebrow">Proud to be supported by</p>
-<div class="kmb-logo-row">
-<div class="kmb-logo kmb-logo--sussex">
-<img alt="Sussex Business Awards 2026" decoding="async" src="{{ '/' | relative_url }}assets/uploads/2026/09/images.png"/>
+<div class="kmb-cols">
+<div>
+<p class="kmb-eyebrow">Our mission</p>
+<h2 id="our-mission">Built for CCHS, with reach far beyond</h2>
+<p class="kmb-section-lede">CCHS has always been, and always will be, at the heart of our mission. Our work begins with the CCHS community, but the technology we are developing could help a much wider population.</p>
+<div class="kmb-arrow-links">
+<a class="kmb-arrow-link" href="{{ '/our-mission/' | relative_url }}">Read our mission</a>
 </div>
-<div class="kmb-logo kmb-logo--tesco">
-<img alt="Tesco Community Grants" decoding="async" src="{{ '/' | relative_url }}assets/uploads/2026/09/3_tesco-community-grants-logo459x294.png"/>
+{% include follow.html %}
 </div>
-<div class="kmb-logo kmb-logo--bodyshop">
-<img alt="The Body Shop" decoding="async" src="{{ '/' | relative_url }}assets/uploads/2026/09/The_Body_Shop_logo_green-scaled.png"/>
-</div>
-<div class="kmb-logo kmb-logo--pfc">
-<img alt="Penny Farthing Club" decoding="async" src="{{ '/' | relative_url }}assets/uploads/2026/09/images-1.jpeg"/>
+<div class="kmb-cchs-facts">
+<div class="kmb-fact"><strong>VENTO</strong>A lightweight, non-invasive wearable that monitors carbon dioxide continuously, and the foundation of a future closed-loop breathing system.</div>
+<div class="kmb-fact"><strong>Beyond CCHS</strong>Subject to validation and approval, VENTO could support people with sleep apnoea, motor neurone disease, COPD and other breathing conditions.</div>
+<div class="kmb-fact"><strong>Genetic testing</strong>We have asked the NHS to add the PHOX2B gene to testing for unexpected death in infancy and childhood. The request is under review.</div>
 </div>
 </div>
 </div>
 </section>
-<!-- ============ SUSSEX BUSINESS AWARDS FEATURE ============ -->
-<section aria-label="Official charity of the Sussex Business Awards 2026" class="kmb-sba">
-<div class="kmb-wrap">
-<div>
-<p class="kmb-eyebrow">Official charity partner</p>
-<h2>Proud to be the official charity of the <em>Sussex Business Awards 2026</em></h2>
+<!-- ============ TALK TO OUR FOUNDERS ============ -->
+{% include cta-band.html %}
+<!-- ============ SUPPORTERS & PARTNER ============ -->
+<section aria-label="Our supporters and partners" class="kmb-supporters">
+<div class="kmb-wrap kmb-supporters-row">
+<div class="kmb-supporters-group">
+<p class="kmb-eyebrow">Proud to be supported by</p>
+<div class="kmb-logo-row">
+<img alt="Platinum Media Group" decoding="async" loading="lazy" src="{{ '/' | relative_url }}assets/uploads/2026/09/images.png"/>
+<img alt="Tesco Community Grants" class="kmb-logo--padded" decoding="async" loading="lazy" src="{{ '/' | relative_url }}assets/uploads/2026/09/3_tesco-community-grants-logo459x294.png"/>
+<img alt="The Body Shop" decoding="async" loading="lazy" src="{{ '/' | relative_url }}assets/uploads/2026/09/The_Body_Shop_logo_green-scaled.png"/>
+<img alt="Penny Farthing Club" class="kmb-logo--round" decoding="async" loading="lazy" src="{{ '/' | relative_url }}assets/uploads/2026/09/images-1.jpeg"/>
 </div>
-<img alt="Sussex Business Awards 2026" class="kmb-sba-logo" decoding="async" src="{{ '/' | relative_url }}assets/uploads/2026/09/SUSSEX2026BANNER-USE-THIS.jpg"/>
+</div>
+<div class="kmb-supporters-group">
+<p class="kmb-eyebrow">Official charity partner of</p>
+<div class="kmb-logo-row">
+<img alt="Sussex Business Awards 2026" class="kmb-logo--sba" decoding="async" loading="lazy" src="{{ '/' | relative_url }}assets/uploads/2026/09/SUSSEX2026BANNER-USE-THIS.jpg"/>
+</div>
+</div>
 </div>
 </section>
 <!-- ============ PRESS ============ -->
 <section aria-label="As featured in" class="kmb-press">
 <div class="kmb-wrap">
 <p class="kmb-eyebrow">As featured in</p>
-<div class="kmb-press-row">
-<span class="kmb-press-item">
-<span class="kmb-press-name">The Times</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">Daily Mirror</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">BBC South</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">ITV1 Good Morning Britain</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">BBC Radio Sussex</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">Greatest Hits Radio</span>
-</span>
-<span class="kmb-press-item">
-<span class="kmb-press-name">SussexWorld</span>
-</span>
-</div>
+{% include press-logos.html %}
 <a class="kmb-arrow-link" href="{{ '/keep-me-breathing-press/' | relative_url }}">See our press &amp; media coverage</a>
 </div>
 </section>
-{% include newsletter.html %}
 
 <script type="application/ld+json">
 {

@@ -1,0 +1,12 @@
+{%- comment -%}
+  "Follow our progress" signup, styled like the Start here cards: a dark top
+  rule, a serif heading and plain text, no box. Pass wide=true to put the form
+  beside the text.
+{%- endcomment -%}
+<div class="kmb-follow{% if include.wide %} kmb-follow--wide{% endif %}">
+  <div>
+    <h3>{{ include.heading | default: "Follow our progress" }}</h3>
+    <p>{{ include.text | default: "VENTO milestones and research news, straight to your inbox." }}</p>
+  </div>
+  {% include signup.html %}
+</div>

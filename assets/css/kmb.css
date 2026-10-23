@@ -18,6 +18,7 @@
   --kmb-tint:      #d3e2f2;  /* soft borders / tints */
   --kmb-blue:      #005eb8;  /* KMB / NHS blue       */
   --kmb-blue-deep: #004b96;
+  --kmb-radius-photo: 6px;   /* soft corners on photos and videos only */
   --kmb-trace:     #41b6e6;  /* NHS light blue: CO2 monitor trace */
   --kmb-light:     #f2f7fd;  /* text on night        */
   --kmb-light-mut: #b6cbe8;  /* muted text on night  */
@@ -254,98 +255,37 @@
 .kmb-supporters {
   background: var(--kmb-ground);
   border-bottom: 1px solid var(--kmb-tint);
-  padding-block: 41.6px 44.8px;
+  padding-block: 32px 30px;
   text-align: center;
 }
 .kmb-supporters .kmb-eyebrow { color: var(--kmb-body); }
-/* Wider container just for the logo band so 4 large logos fit */
-.kmb-supporters .kmb-wrap { max-width: 1380px; }
-/* 4 fixed columns on desktop: the row can never wrap */
+/* One compact row of supporter logos, all at the same height */
 .kmb-logo-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  justify-items: center;
-  align-items: center;
-  gap: 26px clamp(20px, 3vw, 56px);
-  margin-top: 28.8px;
-}
-@media (max-width: 700px) {
-  .kmb-logo-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-.kmb-logo {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  height: clamp(110px, 16vw, 200px);
-  max-width: 100%;
-}
-/* Per-logo optical balance: different shapes tuned to equal visual weight */
-.kmb-logo.kmb-logo--sussex img   { max-height: clamp(76px, 10.5vw, 140px); }
-.kmb-logo.kmb-logo--tesco img    { max-height: clamp(110px, 15vw, 200px); }  /* file has internal padding */
-.kmb-logo.kmb-logo--bodyshop img { max-height: clamp(90px, 12.5vw, 170px); }
-.kmb-logo.kmb-logo--pfc img      { max-height: clamp(76px, 10.5vw, 140px); border-radius: 50%; }
-@media (min-width: 1100px) {
-  .kmb-press-img { max-height: 54px; max-width: 170px; }
-}
-.kmb-logo img {
-  max-height: clamp(84px, 12vw, 160px);
-  max-width: 100%;
-  width: auto;
-}
-/* Shown automatically only while a logo image is missing */
-.kmb-logo-name {
-  font-family: var(--kmb-mono);
-  font-size: 11.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--kmb-body);
-  border: 1px dashed var(--kmb-tint);
-  padding: 0.9em 1.6em;
-  white-space: nowrap;
-}
-@media (prefers-reduced-motion: reduce) { .kmb-logo img { transition: none; } }
-
-/* ================= SUSSEX BUSINESS AWARDS FEATURE ================= */
-
-.kmb-sba {
-  background:
-    radial-gradient(900px 480px at 85% 30%, rgba(0, 114, 206, 0.42), transparent 62%),
-    var(--kmb-night);
-}
-.kmb-sba .kmb-wrap {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: clamp(28px, 4vw, 64px);
-  padding-block: clamp(48px, 6vw, 84px);
-}
-.kmb-sba .kmb-eyebrow { color: var(--kmb-trace); }
-.kmb-sba h2 {
-  color: var(--kmb-light);
-  font-size: clamp(28px, 3.2vw, 44px);
-  font-weight: 600;
-  margin-top: 14px;
-}
-.kmb-sba h2 em { font-style: italic; color: var(--kmb-trace); }
-.kmb-sba p {
-  color: var(--kmb-light-mut);
+  gap: 18px clamp(20px, 3.5vw, 44px);
   margin-top: 16px;
-  max-width: 32em;
-  font-size: clamp(16px, 15px + 0.3vw, 20px);
 }
-.kmb-sba-logo {
-  display: block;
-  justify-self: center;
-  width: min(380px, 100%);
-  /* The banner is very wide: crop to a square around the round logo */
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: 49% 50%;
+.kmb-supporters .kmb-logo-row img { height: clamp(44px, 5vw, 64px); width: auto; max-width: 160px; object-fit: contain; }
+.kmb-supporters .kmb-logo-row .kmb-logo--padded { height: clamp(60px, 7vw, 88px); }  /* file has internal padding */
+.kmb-supporters .kmb-logo-row .kmb-logo--round { border-radius: 50%; }
+/* Crop the wide banner to a square around its round logo */
+.kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; aspect-ratio: 1; object-fit: cover; object-position: 49% 50%; height: clamp(64px, 7vw, 88px); }
+/* Supporters | partner, side by side with a divider; stacked on phones */
+.kmb-supporters-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px 0;
 }
-@media (max-width: 900px) {
-  .kmb-sba .kmb-wrap { grid-template-columns: 1fr; text-align: center; }
-  .kmb-sba p { margin-inline: auto; }
-  .kmb-sba-logo { width: min(340px, 92%); }
+.kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); }
+.kmb-supporters-group + .kmb-supporters-group { border-left: 1px solid var(--kmb-tint); }
+@media (max-width: 760px) {
+  .kmb-supporters-row { flex-direction: column; }
+  .kmb-supporters-group + .kmb-supporters-group { border-left: 0; border-top: 1px solid var(--kmb-tint); padding-top: 24px; }
 }
 
 /* ================= TALK TO OUR FOUNDERS BAND ================= */
@@ -604,15 +544,49 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
   white-space: nowrap;
 }
 .kmb-press-item { display: inline-flex; align-items: center; }
-.kmb-press-img {
-  max-height: 44px;
-  max-width: 140px;
+.kmb-press .kmb-press-img {
+  height: clamp(28px, 3vw, 40px);
   width: auto;
+  max-width: 150px;
+  object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.65;
+  opacity: 0.7;
   transition: filter .25s ease, opacity .25s ease;
 }
+.kmb-press .kmb-press-row { align-items: center; }
 .kmb-press-item:hover .kmb-press-img { filter: grayscale(0); opacity: 1; }
+
+/* Press page: the outlet row under a top rule, then coverage as a plain list */
+.kmb-press.kmb-press--page { margin-top: 0; padding: 20px 0 0; background: none; border: 0; border-top: 2px solid var(--kmb-ink); text-align: left; }
+.kmb-press--page .kmb-press-row { justify-content: flex-start; }
+.kmb-press--page .kmb-press-row { margin-top: 14px; }
+.kmb-coverage { list-style: none; padding: 0; margin: 1.4em 0 0; }
+.kmb-coverage li { margin: 0; border-top: 1px solid var(--kmb-tint); }
+.kmb-coverage li:last-child { border-bottom: 1px solid var(--kmb-tint); }
+.kmb-coverage a {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 6px 28px;
+  padding: 18px 0;
+  color: inherit;
+}
+.kmb-coverage-meta {
+  font-family: var(--kmb-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kmb-body);
+}
+.kmb-coverage-meta strong { display: block; font-weight: 600; color: var(--kmb-blue); margin-bottom: 4px; }
+.kmb-coverage-title {
+  font-family: var(--kmb-serif);
+  font-weight: 600;
+  font-size: clamp(17px, 16px + 0.3vw, 20px);
+  line-height: 1.35;
+  color: var(--kmb-ink);
+}
+.kmb-coverage a:hover .kmb-coverage-title { color: var(--kmb-blue); text-decoration: underline; }
+@media (max-width: 600px) { .kmb-coverage a { grid-template-columns: 1fr; } }
 
 /* Contact email cards */
 .kmb-contact-cards { display: grid; }
@@ -649,23 +623,27 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 
 /* ================= NEWSLETTER ================= */
 
-.kmb-newsletter {
-  background: var(--kmb-card);
-  border-top: 1px solid var(--kmb-tint);
-  text-align: center;
-}
-.kmb-newsletter .kmb-wrap { padding-block: clamp(56px, 7vw, 84px); }
-.kmb-newsletter h2 {
-  font-size: clamp(27.2px, 3vw, 35.2px);
-  font-weight: 600;
-  max-width: 22em;
-  margin: 16px auto 0;
-}
-.kmb-newsletter p { max-width: 36em; margin: 16px auto 0; }
-.kmb-newsletter .kmb-btn { margin-top: 28.8px; }
-.kmb-newsletter .kmb-signup { max-width: 560px; margin: 24px auto 0; }
+.kmb-newsletter .kmb-wrap { padding-block: clamp(40px, 5vw, 64px); }
 .kmb-home .kmb-signup-alt { margin-top: 10px; font-size: 14px; color: var(--kmb-body); }
 .kmb-signup-alt a { color: var(--kmb-blue); text-decoration: underline; text-underline-offset: 3px; }
+/* "Follow our progress" signup: same language as the Start here cards */
+.kmb-follow {
+  margin-top: 36px;
+  border-top: 2px solid var(--kmb-ink);
+  padding-top: 20px;
+}
+.kmb-follow h3 { font-size: 19.5px; font-weight: 600; }
+.kmb-follow p { margin-top: 11.2px; font-size: clamp(15px, 14px + 0.25vw, 17.5px); color: var(--kmb-body); }
+.kmb-follow .kmb-signup { margin-top: 14px; }
+.kmb-follow--wide {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 16px clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.kmb-follow--wide .kmb-signup { margin-top: 0; }
+@media (max-width: 760px) { .kmb-follow--wide { grid-template-columns: 1fr; } }
 
 /* ================= CLOSING BAND ================= */
 
@@ -675,26 +653,23 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
     var(--kmb-night);
   text-align: center;
 }
-.kmb-close .kmb-wrap { padding-block: clamp(72px, 9vw, 116px); }
-.kmb-close h2 {
-  color: var(--kmb-light);
-  font-size: clamp(32px, 4vw, 54px);
-  font-weight: 600;
-  max-width: 17em;
-  margin-inline: auto;
-}
-.kmb-close h2 em { font-style: italic; color: var(--kmb-trace); }
+.kmb-close .kmb-wrap { padding-block: clamp(32px, 4vw, 44px); }
 .kmb-close .kmb-close-meta {
   font-family: var(--kmb-mono);
   font-size: 11.8px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--kmb-light-mut);
-  margin-top: 38.4px;
+  margin-top: 0;
   line-height: 2.1;
 }
 .kmb-close-meta a { color: var(--kmb-light); }
 .kmb-close-meta a:hover { color: var(--kmb-trace); }
+/* Social media icons under the footer links */
+.kmb-social { display: flex; justify-content: center; gap: 22px; margin-top: 18px !important; }
+.kmb-social a { display: inline-flex; padding: 6px; color: var(--kmb-light); transition: color .18s ease; }
+.kmb-social a:hover { color: var(--kmb-trace); }
+.kmb-social svg { display: block; }
 
 /* ================= FLOATING DONATE BUTTON ================= */
 
@@ -876,7 +851,7 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-nav li.is-open > .kmb-nav-link .kmb-caret { transform: rotate(180deg); }
 
 .kmb-header-donate { flex: none; padding: 0.85em 1.6em; font-size: 15.5px; }
-/* Quiet utility link beside Donate (Shop is also in the Get involved menu) */
+/* Quiet utility link beside Donate (Shop is also in the Ways to help menu) */
 .kmb-header-shop {
   flex: none;
   margin-right: -10px;
@@ -1049,6 +1024,8 @@ a[data-zoom] { display: block; cursor: zoom-in; }
   max-height: 92vh;
   overflow: auto;
 }
+/* Show charts larger than they appear on the page (scrolls on small screens) */
+.kmb-zoom img { width: clamp(1000px, 96vw, 1600px); }
 .kmb-zoom::backdrop { background: rgba(0, 20, 60, 0.85); }
 .kmb-home .kmb-zoom img { display: block; max-width: none;cursor: auto; }
 .kmb-zoom-close {
@@ -1119,6 +1096,8 @@ a[data-zoom] { display: block; cursor: zoom-in; }
 .kmb-prose > .kmb-photo-row { margin-top: 1.6em; }
 .kmb-photo-row figure { margin: 0; }
 .kmb-photo-row img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover;display: block; }
+/* Two across, e.g. a 2 x 2 block of story photos */
+.kmb-photo-row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 /* A row of photos inside a story, kept apart from the text */
 .kmb-story-photos { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -1540,3 +1519,21 @@ a.kmb-tile:hover h3 { color: var(--kmb-blue); }
 @media (max-width: 600px) { .kmb-cchs-facts--grid { grid-template-columns: 1fr; } }
 .kmb-prose .kmb-fact strong { color: var(--kmb-blue); font-weight: 500; }
 
+
+/* Photos and videos get softly rounded corners; buttons, cards and bands stay square */
+.kmb-hero-photo img,
+.kmb-page-hero .kmb-hero-photo img,
+.kmb-prose figure img,
+.kmb-split figure img,
+.kmb-photo-row img,
+.kmb-photo-grid img,
+.kmb-story-photos img,
+.kmb-person img,
+.kmb-founder img,
+.kmb-faces img,
+.kmb-roadmap img,
+.kmb-tile-img,
+.kmb-embed,
+.kmb-video,
+.kmb-prose video { border-radius: var(--kmb-radius-photo); }
+.kmb-tile-img, .kmb-embed, .kmb-video { overflow: hidden; }
