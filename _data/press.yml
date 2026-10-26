@@ -1,10 +1,11 @@
 # "As featured in" outlets, shown on the home page and the press page.
-# Add a logo (path under /assets/) to show it instead of the name.
+# Add a logo (path under /assets/) to show it instead of the name, and a url
+# (external, or a site path for our own write-up) to make it a link.
 # Logos from Wikimedia Commons / Wikipedia.
-- { name: The Times, logo: /assets/uploads/press/times.svg }
+- { name: The Times, logo: /assets/uploads/press/times.svg, url: /2022/12/26/keep-me-breathing-featured-in-the-times/ }
 - { name: Daily Mirror, logo: /assets/uploads/press/mirror.svg }
 - { name: BBC South, logo: /assets/uploads/press/bbc-south.svg }
 - { name: ITV1 Good Morning Britain, logo: /assets/uploads/press/good-morning-britain.svg }
-- { name: BBC Radio Sussex, logo: /assets/uploads/press/bbc-radio-sussex.svg }
+- { name: BBC Radio Sussex, logo: /assets/uploads/press/bbc-radio-sussex.svg, url: /2026/07/21/ride-for-rare-bbc-radio-sussex-interview-with-keep-me-breathing-founder-james-oakley/ }
 - { name: Greatest Hits Radio, logo: /assets/uploads/press/greatest-hits-radio.png }
-- { name: SussexWorld, logo: /assets/uploads/press/sussexworld.svg }
+- { name: SussexWorld, logo: /assets/uploads/press/sussexworld.svg, url: "https://www.sussexexpress.co.uk/your-world/arundel-family-charity-takes-on-1000-mile-bike-ride-to-austria-to-help-children-who-depend-on-breathing-support-8803611" }
