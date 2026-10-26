@@ -18,6 +18,7 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
 | `_data/navigation.yml` | The main menu |
 | `_data/events.yml` | Events: upcoming, past and conference talks |
 | `_data/partners.yml` | Partners and sponsors |
+| `_data/bulletins.yml` | News bulletins listed on `/news-bulletins/` |
 | `_products/` | One file per shop product |
 | `_posts/` | Updates / news articles (`YYYY-MM-DD-title.html`) |
 | `pages/` | All other pages (each has a `permalink:` matching its old URL) |
@@ -47,10 +48,13 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
   `date:` (YYYY-MM-DD), `when`, `where`, `image`, and an optional `link` to book.
   Upcoming events hide themselves automatically once their date has passed.
   Switch `kind` to `past` to show them in the past-events gallery.
+- **Add a news bulletin**: add an entry at the top of `_data/bulletins.yml`
+  with `title`, `date` (the 1st of the bulletin's month), a short `summary`
+  and the Klaviyo "view in browser" `url`.
 - **Add a conference talk**: add an entry with `kind: talk`, `when`, `where` and `date`.
 - **Add a product**: copy a file in `_products/`, change the details and images.
 - **Edit the menu**: `_data/navigation.yml`. Five sections; the first link in
-  each is that section's landing page. Donate and Shop sit beside the menu.
+  each is usually that section's landing page. Donate and Shop sit beside the menu.
 - **Add a call-booking link for major gifts**: paste it (e.g. Calendly) into
   `major_gifts.call_url` in `_config.yml`. Until then, "Arrange a call" buttons
   open a pre-filled email to the founders.
