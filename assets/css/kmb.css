@@ -268,6 +268,9 @@
 .kmb-supporters .kmb-logo-row img { height: clamp(44px, 5vw, 64px); width: auto; max-width: 160px; object-fit: contain; }
 .kmb-supporters .kmb-logo-row .kmb-logo--padded { height: clamp(60px, 7vw, 88px); }  /* file has internal padding */
 .kmb-supporters .kmb-logo-row .kmb-logo--round { border-radius: 50%; }
+/* Logos that link out (press coverage, partnership evidence) */
+.kmb-logo-link { display: inline-flex; align-items: center; transition: opacity .2s ease; }
+.kmb-logo-link:hover { opacity: .75; }
 /* Crop the wide banner to a square around its round logo */
 .kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; aspect-ratio: 1; object-fit: cover; object-position: 49% 50%; height: clamp(64px, 7vw, 88px); }
 /* Supporters | partner, side by side with a divider; stacked on phones */
@@ -551,12 +554,8 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
   width: auto;
   max-width: 150px;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.7;
-  transition: filter .25s ease, opacity .25s ease;
 }
 .kmb-press .kmb-press-row { align-items: center; }
-.kmb-press-item:hover .kmb-press-img { filter: grayscale(0); opacity: 1; }
 
 /* Press page: the outlet row under a top rule, then coverage as a plain list */
 .kmb-press.kmb-press--page { margin-top: 0; padding: 20px 0 0; background: none; border: 0; border-top: 2px solid var(--kmb-ink); text-align: left; }
