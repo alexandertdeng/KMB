@@ -271,9 +271,8 @@
 /* Logos that link out (press coverage, partnership evidence) */
 .kmb-logo-link { display: inline-flex; align-items: center; transition: opacity .2s ease; }
 .kmb-logo-link:hover { opacity: .75; }
-/* Crop the wide banner to a square around its round logo, shown larger than
-   the supporter logos as our official charity partnership */
-.kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; max-width: none; aspect-ratio: 1; object-fit: cover; object-position: 49% 50%; height: clamp(104px, 11vw, 140px); }
+/* Crop the wide banner around its round logo, shown larger than the supporters */
+.kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; max-width: none; aspect-ratio: 3 / 2; object-fit: cover; object-position: 49% 50%; height: clamp(110px, 12vw, 150px); border-radius: var(--kmb-radius-photo); }
 /* Supporters | partner, side by side with a divider; stacked on phones */
 .kmb-supporters-row {
   display: flex;
@@ -564,9 +563,9 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-press.kmb-press--page { margin-top: 0; padding: 20px 0 0; background: none; border: 0; border-top: 2px solid var(--kmb-ink); text-align: left; }
 .kmb-press--page .kmb-press-row { justify-content: flex-start; }
 .kmb-press--page .kmb-press-row { margin-top: 14px; }
-/* Same list on the news bulletins page, where each entry adds a teaser */
-.kmb-prose .kmb-coverage { list-style: none; padding: 0; margin: 1.4em 0 0; }
-.kmb-coverage li { margin: 0; border-top: 1px solid var(--kmb-tint); }
+/* .kmb-prose prefix outranks the generic prose list padding and item gaps */
+.kmb-coverage, .kmb-prose .kmb-coverage { list-style: none; padding: 0; margin: 1.4em 0 0; }
+.kmb-coverage li, .kmb-prose .kmb-coverage li { margin: 0; border-top: 1px solid var(--kmb-tint); }
 .kmb-coverage li:last-child { border-bottom: 1px solid var(--kmb-tint); }
 .kmb-coverage a {
   display: grid;
@@ -590,18 +589,13 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
   line-height: 1.35;
   color: var(--kmb-ink);
 }
-.kmb-coverage-text, .kmb-coverage-text .kmb-coverage-title { display: block; }
-.kmb-coverage-teaser {
-  display: block;
-  margin-top: 6px;
-  font-size: clamp(15px, 14.5px + 0.15vw, 17px);
-  line-height: 1.55;
-  color: var(--kmb-body);
+.kmb-coverage a:hover .kmb-coverage-title { color: var(--kmb-blue); text-decoration: underline; }
+/* Optional short summary under the title (news bulletins) */
+.kmb-coverage-summary { grid-column: 2; font-size: 16px; line-height: 1.55; color: var(--kmb-body); }
+@media (max-width: 600px) {
+  .kmb-coverage a { grid-template-columns: 1fr; }
+  .kmb-coverage-summary { grid-column: auto; }
 }
-/* Underline the title only, not the date or teaser */
-.kmb-coverage-title { text-decoration: underline; text-decoration-color: rgba(0, 94, 184, 0.35); text-underline-offset: 3px; }
-.kmb-coverage a:hover .kmb-coverage-title { color: var(--kmb-blue); text-decoration-color: currentColor; }
-@media (max-width: 600px) { .kmb-coverage a { grid-template-columns: 1fr; } }
 
 /* Contact email cards */
 .kmb-contact-cards { display: grid; }
@@ -1437,7 +1431,12 @@ a.kmb-tile:hover h3 { color: var(--kmb-blue); }
 }
 .kmb-post-cover { max-width: 900px; margin: 0 auto; }
 .kmb-post-cover img { width: 100%;display: block; margin-top: clamp(-80px, -6vw, -40px); position: relative; }
-.kmb-post-body { max-width: 760px; margin: 0 auto; }
+.kmb-post-body { max-width: 760px; margin: 0 auto; display: flow-root; }
+/* Head-and-shoulders photo beside the opening paragraphs (profile posts) */
+.kmb-prose > figure.kmb-portrait { max-width: 260px; }
+@media (min-width: 700px) {
+  .kmb-prose > figure.kmb-portrait { float: right; width: 40%; margin: 0.4em 0 1em clamp(24px, 3vw, 36px); }
+}
 .kmb-post-body > p, .kmb-post-body > ul, .kmb-post-body > h2, .kmb-post-body > h3 { max-width: none; }
 .kmb-post-nav {
   display: grid;

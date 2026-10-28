@@ -1,43 +1,43 @@
-# News bulletins, newest first, listed on /news-bulletins/ in the same style
-# as the press coverage list. Add a new bulletin at the top: the month it went
-# out, its headline, a one- or two-sentence teaser and its Klaviyo web-view link.
-- month: June 2026
-  title: We’re riding high!
-  teaser: It’s been a busy few months since our last news bulletin! We’ve been pushing and progressing our goals for 2026 and as a part of this, we’re delighted to announce that we have expanded our core team.
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&se=hello%40sarahmorganglobal.com&m=01KTBN1QN3Y4R7Y2KHM8VHAM2M&r=01KTZR5WG4N41G0BVASNDKN9TB"
-- month: December 2025
-  title: What A Year It’s Been!
-  teaser: As a result of your support we’ve invested over £175,000 into CCHS treatment research and development, which has enabled us to build VENTO, the world’s smallest portable, non-invasive CO2 wearable, and successfully file the patent.
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01KE70X15XDQ4E68MN3R16ZWZM&r=01KE70ZE47QW4XHG6JZ0FSTD7M"
-- month: October 2025
-  title: Big News on Our CO2 Monitoring Device!
-  teaser: We are so thankful for your support over the past two years. As of this week, we can officially announce that Keep Me Breathing has filed its first patent for technology to begin making a real difference to children born with CCHS…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JDXP1NT9X33GY1NQRE6RJA&r=01K8JE09M7WQRED95QFY0ZTFG5"
-- month: August 2025
-  title: Continuing Our Momentum
-  teaser: We promised in our last bulletin that we had more exciting news to update you on, and we do…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQPE54V61JM22RHBXCPHT1&r=3tMeFaY5"
-- month: June 2025
-  title: Lots to Celebrate!
-  teaser: May was a big month for us at KMB as, following on from our April bulletin, we successfully and ahead of schedule completed phase 1 of our 3 phase roadmap to creating our advanced breathing pacemaker to help all patients with CCHS sleep freely…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JRX9FV05FH5VF63YEHDYNV&r=3tMgaZM2"
-- month: April 2025
-  title: Springing Towards The Summer at KMB!
-  teaser: We had an amazing day and turn out on Sunday 6th April for the London to Brighton Marathon and 10k runs…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQNEWTR8PAHF323FJS66VW&r=3tMeFaXL"
-- month: February 2025
-  title: Upcoming Events With Keep Me Breathing
-  teaser: Join us for an incredible line up of events dedicated to raising awareness and support for those affected by Congenital Central Hypoventilation Syndrome (CCHS)…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQJZNF42P441JP55Q4PG6A&r=3tMesusm"
-- month: January 2025
-  title: Welcome to 2025!
-  teaser: New Year for us all and like many of you, we have many milestones to reach during the year ahead, both in terms of fundraising and in progressing our product development programme…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JR2P12A08T7G63FM793ZVD&r=01K8JR75JKVQNQB20474V5YQFM"
-- month: November 2024
-  title: Research and Development Update
-  teaser: As you know we have an ambitious plan to fund, develop and bring a new CCHS treatment to market with a 5 year accelerated plan backed by over 130 doctors, scientists and medical professionals. Thank you so much for contributing to this…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JTCNVQQ9S1XGXDEKS4PT9J&r=3tMhv9xZ"
-- month: September 2024
-  title: Dreaming of Breathing
-  teaser: Our very first storybook is here…
-  url: "https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JR9Y95ND10XC76D6630FZD&r=01K8JT5Z1SK0BGQBWCN50DT3C6"
+# News bulletins, newest first, listed on /news-bulletins/ in the same style as
+# the press coverage list. date: the bulletin's month (use the 1st); url: the
+# Klaviyo "view in browser" link, with any se=<email> part removed.
+- title: We’re Riding High!
+  date: 2026-06-01
+  summary: It’s been a busy few months since our last news bulletin! We’ve been pushing and progressing our goals for 2026 and as a part of this, we’re delighted to announce that we have expanded our core team.
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01KTBN1QN3Y4R7Y2KHM8VHAM2M&r=01KTZR5WG4N41G0BVASNDKN9TB
+- title: What a Year It’s Been!
+  date: 2025-12-01
+  summary: As a result of your support we’ve invested over £175,000 into CCHS treatment research and development, which has enabled us to build VENTO, the world’s smallest portable, non-invasive CO2 wearable, and successfully file the patent.
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01KE70X15XDQ4E68MN3R16ZWZM&r=01KE70ZE47QW4XHG6JZ0FSTD7M
+- title: Big News on Our CO2 Monitoring Device!
+  date: 2025-10-01
+  summary: We are so thankful for your support over the past two years. As of this week, we can officially announce that Keep Me Breathing has filed its first patent for technology to begin making a real difference to children born with CCHS…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JDXP1NT9X33GY1NQRE6RJA&r=01K8JE09M7WQRED95QFY0ZTFG5
+- title: Continuing Our Momentum
+  date: 2025-08-01
+  summary: We promised in our last bulletin that we had more exciting news to update you on, and we do…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQPE54V61JM22RHBXCPHT1&r=3tMeFaY5
+- title: Lots to Celebrate!
+  date: 2025-06-01
+  summary: May was a big month for us at KMB as, following on from our April bulletin, we successfully and ahead of schedule completed phase 1 of our 3 phase roadmap to creating our advanced breathing pacemaker to help all patients with CCHS sleep freely…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JRX9FV05FH5VF63YEHDYNV&r=3tMgaZM2
+- title: Springing Towards the Summer at KMB!
+  date: 2025-04-01
+  summary: We had an amazing day and turn out on Sunday 6th April for the London to Brighton Marathon and 10k runs…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQNEWTR8PAHF323FJS66VW&r=3tMeFaXL
+- title: Upcoming Events with Keep Me Breathing
+  date: 2025-02-01
+  summary: Join us for an incredible line up of events dedicated to raising awareness and support for those affected by Congenital Central Hypoventilation Syndrome (CCHS)…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JQJZNF42P441JP55Q4PG6A&r=3tMesusm
+- title: Welcome to 2025!
+  date: 2025-01-01
+  summary: New Year for us all and like many of you, we have many milestones to reach during the year ahead, both in terms of fundraising and in progressing our product development programme…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JR2P12A08T7G63FM793ZVD&r=01K8JR75JKVQNQB20474V5YQFM
+- title: Research and Development Update
+  date: 2024-11-01
+  summary: As you know we have an ambitious plan to fund, develop and bring a new CCHS treatment to market with a 5 year accelerated plan backed by over 130 doctors, scientists and medical professionals. Thank you so much for contributing to this…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=2824da6985ed91866cfcb954c60ba1aa&m=01K8JTCNVQQ9S1XGXDEKS4PT9J&r=3tMhv9xZ
+- title: Dreaming of Breathing
+  date: 2024-09-01
+  summary: Our very first storybook is here…
+  url: https://manage.kmail-lists.com/subscriptions/web-view?a=VytJdd&c=01JRABNHRA1S79QJJ28S9RA182&k=9359441d95d30036541d6dab996b0458&g=U4xRVM&m=01K8JR9Y95ND10XC76D6630FZD&r=01K8JT5Z1SK0BGQBWCN50DT3C6

@@ -1,8 +1,7 @@
-# Main menu: five sections, each a dropdown whose first link is the section's
-# landing page. A child with "label" only (no url) is a small group heading.
+# Main menu: five sections, each a dropdown whose first link is usually the
+# section's landing page (Ways to help has none: /get-involved/ is reached from
+# the homepage instead). A child with "label" only (no url) is a small group heading.
 # Donate and Shop sit beside the menu in _includes/header.html.
-# The "All ways to help" page (/get-involved/) is kept but left out of the
-# menu; the homepage "I want to help" card still links to it.
 - title: CCHS
   children:
     - { title: "What is CCHS?", url: /cchs-for-patients-and-parents/ }

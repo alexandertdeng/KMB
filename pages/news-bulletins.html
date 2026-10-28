@@ -8,17 +8,16 @@ description: Our bi-monthly bulletins on research, fundraising and the KMB commu
 lede: Our bi-monthly bulletins on research, fundraising and the KMB community.
 wp_id: 7550
 ---
-<p class="kmb-actions"><a class="kmb-btn kmb-btn--blue" href="{{ site.baseurl }}/subscribe-for-our-news-and-updates/">Subscribe for future bulletins here</a></p>
+<p class="kmb-actions"><a class="kmb-btn kmb-btn--blue" href="{{ '/subscribe-for-our-news-and-updates/' | relative_url }}">Subscribe for future bulletins here</a></p>
 <h2>Past bulletins</h2>
+<p>Catch up on any bulletin you missed. Each one opens in a new tab.</p>
 <ul class="kmb-coverage">
   {%- for bulletin in site.data.bulletins %}
   <li>
-    <a class="kmb-coverage-link" href="{{ bulletin.url | escape }}" rel="noopener">
-      <span class="kmb-coverage-meta">{{ bulletin.month }}</span>
-      <span class="kmb-coverage-text">
-        <span class="kmb-coverage-title">{{ bulletin.title }}</span>
-        <span class="kmb-coverage-teaser">{{ bulletin.teaser }}</span>
-      </span>
+    <a class="kmb-coverage-link" href="{{ bulletin.url }}" target="_blank" rel="noopener">
+      <span class="kmb-coverage-meta"><time datetime="{{ bulletin.date | date: '%Y-%m' }}">{{ bulletin.date | date: "%B %Y" }}</time></span>
+      <span class="kmb-coverage-title">{{ bulletin.title }}</span>
+      <span class="kmb-coverage-summary">{{ bulletin.summary }}</span>
     </a>
   </li>
   {%- endfor %}
