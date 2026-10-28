@@ -17,7 +17,7 @@ wp_id: 5160
 <ul class="kmb-coverage">
   {%- for post in coverage %}
   <li>
-    <a href="{{ post.url | relative_url }}">
+    <a class="kmb-coverage-link" href="{{ post.url | relative_url }}">
       <span class="kmb-coverage-meta">{% if post.outlet %}<strong>{{ post.outlet }}</strong>{% endif %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time></span>
       <span class="kmb-coverage-title">{{ post.title }}</span>
     </a>

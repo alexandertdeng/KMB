@@ -271,8 +271,9 @@
 /* Logos that link out (press coverage, partnership evidence) */
 .kmb-logo-link { display: inline-flex; align-items: center; transition: opacity .2s ease; }
 .kmb-logo-link:hover { opacity: .75; }
-/* Crop the wide banner to a square around its round logo */
-.kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; aspect-ratio: 1; object-fit: cover; object-position: 49% 50%; height: clamp(64px, 7vw, 88px); }
+/* Crop the wide banner to a square around its round logo, shown larger than
+   the supporter logos as our official charity partnership */
+.kmb-supporters .kmb-logo-row .kmb-logo--sba { width: auto; max-width: none; aspect-ratio: 1; object-fit: cover; object-position: 49% 50%; height: clamp(104px, 11vw, 140px); }
 /* Supporters | partner, side by side with a divider; stacked on phones */
 .kmb-supporters-row {
   display: flex;
@@ -281,7 +282,9 @@
   align-items: stretch;
   gap: 24px 0;
 }
-.kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); }
+.kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); display: flex; flex-direction: column; }
+/* Centre each group's logos on the taller partner logo beside them */
+.kmb-supporters-group .kmb-logo-row { flex: 1; }
 .kmb-supporters-group + .kmb-supporters-group { border-left: 1px solid var(--kmb-tint); }
 /* "Companies: partner with us" link under the logos */
 .kmb-supporters-more { margin-top: 22px; }
@@ -561,7 +564,8 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-press.kmb-press--page { margin-top: 0; padding: 20px 0 0; background: none; border: 0; border-top: 2px solid var(--kmb-ink); text-align: left; }
 .kmb-press--page .kmb-press-row { justify-content: flex-start; }
 .kmb-press--page .kmb-press-row { margin-top: 14px; }
-.kmb-coverage { list-style: none; padding: 0; margin: 1.4em 0 0; }
+/* Same list on the news bulletins page, where each entry adds a teaser */
+.kmb-prose .kmb-coverage { list-style: none; padding: 0; margin: 1.4em 0 0; }
 .kmb-coverage li { margin: 0; border-top: 1px solid var(--kmb-tint); }
 .kmb-coverage li:last-child { border-bottom: 1px solid var(--kmb-tint); }
 .kmb-coverage a {
@@ -586,7 +590,17 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
   line-height: 1.35;
   color: var(--kmb-ink);
 }
-.kmb-coverage a:hover .kmb-coverage-title { color: var(--kmb-blue); text-decoration: underline; }
+.kmb-coverage-text, .kmb-coverage-text .kmb-coverage-title { display: block; }
+.kmb-coverage-teaser {
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(15px, 14.5px + 0.15vw, 17px);
+  line-height: 1.55;
+  color: var(--kmb-body);
+}
+/* Underline the title only, not the date or teaser */
+.kmb-coverage-title { text-decoration: underline; text-decoration-color: rgba(0, 94, 184, 0.35); text-underline-offset: 3px; }
+.kmb-coverage a:hover .kmb-coverage-title { color: var(--kmb-blue); text-decoration-color: currentColor; }
 @media (max-width: 600px) { .kmb-coverage a { grid-template-columns: 1fr; } }
 
 /* Contact email cards */
@@ -991,13 +1005,13 @@ main > .kmb-cta-band:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0
 .kmb-prose h2 + *, .kmb-prose h3 + *, .kmb-prose h4 + * { margin-top: 0.7em; }
 .kmb-prose p, .kmb-prose li { font-size: clamp(16.5px, 15.5px + 0.25vw, 19.5px); }
 .kmb-prose strong { color: var(--kmb-ink); font-weight: 600; }
-.kmb-prose a:not(.kmb-btn):not(.kmb-arrow-link):not(.kmb-tile) {
+.kmb-prose a:not(.kmb-btn):not(.kmb-arrow-link):not(.kmb-tile):not(.kmb-coverage-link) {
   color: var(--kmb-blue);
   text-decoration: underline;
   text-decoration-color: rgba(0, 94, 184, 0.35);
   text-underline-offset: 3px;
 }
-.kmb-prose a:not(.kmb-btn):not(.kmb-arrow-link):not(.kmb-tile):hover { text-decoration-color: currentColor; }
+.kmb-prose a:not(.kmb-btn):not(.kmb-arrow-link):not(.kmb-tile):not(.kmb-coverage-link):hover { text-decoration-color: currentColor; }
 .kmb-prose ul, .kmb-prose ol { padding-left: 1.3em; margin-bottom: 0; }
 .kmb-prose li + li { margin-top: 0.4em; }
 .kmb-prose ul li::marker { color: var(--kmb-blue); }

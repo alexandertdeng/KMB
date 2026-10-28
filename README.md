@@ -18,6 +18,7 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
 | `_data/navigation.yml` | The main menu |
 | `_data/events.yml` | Events: upcoming, past and conference talks |
 | `_data/partners.yml` | Partners and sponsors |
+| `_data/bulletins.yml` | News bulletins (newest first) |
 | `_products/` | One file per shop product |
 | `_posts/` | Updates / news articles (`YYYY-MM-DD-title.html`) |
 | `pages/` | All other pages (each has a `permalink:` matching its old URL) |
@@ -48,6 +49,8 @@ so there is no build pipeline to maintain. Push to `main` and the site updates.
   Upcoming events hide themselves automatically once their date has passed.
   Switch `kind` to `past` to show them in the past-events gallery.
 - **Add a conference talk**: add an entry with `kind: talk`, `when`, `where` and `date`.
+- **Add a news bulletin**: add an entry at the top of `_data/bulletins.yml`
+  with the `month`, `title`, a short `teaser` and the Klaviyo web-view `url`.
 - **Add a product**: copy a file in `_products/`, change the details and images.
 - **Edit the menu**: `_data/navigation.yml`. Five sections; the first link in
   each is that section's landing page. Donate and Shop sit beside the menu.
