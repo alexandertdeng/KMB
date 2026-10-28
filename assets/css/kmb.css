@@ -281,7 +281,9 @@
   align-items: stretch;
   gap: 24px 0;
 }
-.kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); }
+.kmb-supporters-group { padding-inline: clamp(20px, 3.5vw, 48px); display: flex; flex-direction: column; }
+/* Centre each group's logos on the taller partner logo beside them */
+.kmb-supporters-group .kmb-logo-row { flex: 1; }
 .kmb-supporters-group + .kmb-supporters-group { border-left: 1px solid var(--kmb-tint); }
 /* "Companies: partner with us" link under the logos */
 .kmb-supporters-more { margin-top: 22px; }
